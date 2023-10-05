@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      /*From KMP*/
+      .site-page {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        position: relative;
+        left: auto;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        box-sizing: border-box;
+        zoom: 1;
+        margin: 0 auto;
+      }
+      .site-page:after {
+        content: ' ';
+        display: block;
+        font-size: 0;
+        width: 100%;
+        height: 0;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        clear: both;
+        visibility: hidden;
+      }
+      .site-content {
+        font-family: 'Open Sans', sans-serif;
+      }
+      .site-content {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 100%;
+        color: #262626;
+        font-size: 16px;
+        line-height: 30px;
+      }
+      .site-content ul:last-child,
+      .site-content ol:last-child,
+      .site-content table:last-child,
+      .site-content h1:last-child,
+      .site-content h2:last-child,
+      .site-content h3:last-child,
+      .site-content h4:last-child,
+      .site-content h5:last-child,
+      .site-content h6:last-child,
+      .site-content p:last-child {
+        margin-bottom: 0;
+      }
+      .site-content h1,
+      .site-content h2,
+      .site-content h3,
+      .site-content h4,
+      .site-content h5,
+      .site-content h6 {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 100%;
+        color: #262626;
+        font-size: 16px;
+        line-height: 30px;
+        margin: 32px 0 28px 0;
+        line-height: 40px;
+        font-weight: 400;
+        color: #061239;
+      }
+      .site-content h1:first-child,
+      .site-content h2:first-child,
+      .site-content h3:first-child,
+      .site-content h4:first-child,
+      .site-content h5:first-child,
+      .site-content h6:first-child {
+        margin-top: 0;
+      }
+      .site-content p.red,
+      .site-content h2.red,
+      .site-content h3.red {
+        color: #ba1f2e;
+      }
+      .site-content h1 {
+        font-size: 36px;
+      }
+      .site-content h2 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+      .site-content h3 {
+        font-size: 24px;
+        line-height: 36px;
+      }
+      .site-content h4 {
+        font-size: 20px;
+        line-height: 32px;
+      }
+      .site-content h5 {
+        font-size: 18px;
+        line-height: 32px;
+      }
+      .site-content h6 {
+        font-size: 16px;
+        line-height: 28px;
+      }
+      .site-content h2 {
+        margin: 15px 0 15px;
+        font-size: 15px;
+        font-weight: 700;
+        color: #0f2777;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+      }
+      .site-content h3 {
+        margin: 15px 0 15px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #000;
+      }
+      .site-content h1.main {
+        margin-top: 20px;
+        margin-bottom: 0;
+      }
+      .site-content h1.post {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .site-content p {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 100%;
+        color: #262626;
+        font-size: 16px;
+        line-height: 30px;
+        margin: 15px 0 20px 0;
+      }
+      .site-content p:first-child {
+        margin-top: 0;
+      }
+      .site-content p:last-child {
+        margin-bottom: 0;
+      }
+      .site-content ul,
+      .site-content ol {
+        margin: 15px 0 20px 0;
+        padding: 0 0 0 20px;
+      }
+      .site-content ul li,
+      .site-content ol li {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 100%;
+        color: #262626;
+        font-size: 16px;
+        line-height: 30px;
+        list-style: none;
+        background: none;
+      }
+      .site-content table {
+        margin: 15px 0 20px 0;
+      }
+      .site-content table th,
+      .site-content table td {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 100%;
+        color: #262626;
+        font-size: 16px;
+        line-height: 30px;
+      }
+      .site-content table {
+        width: 100%;
+        margin: 33px auto 52px;
+      }
+      .site-content table tr:nth-child(2n) td {
+        background: #fff;
+      }
+      .site-content table tr td {
+        padding: 5px 10px;
+        background: #f0f0f0;
+        font-size: 16px;
+        font-weight: 400;
+        color: #666;
+      }
+      .site-content table tr td b {
+        color: #262626;
+      }
+      .site-content table.clear tr td {
+        background: transparent;
+      }
+      .site-content table.clear tr td b {
+        font-weight: 700;
+        color: #0f2777;
+        font-size: 18px;
+      }
+      .site-w {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        left: auto;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        box-sizing: border-box;
+        width: 90%;
+        max-width: 1440px;
+      }
+      @media screen and (max-width: 1200px) {
+        body .site-w {
+          padding: 0 33px;
+          width: auto;
+        }
+      }
+      @media screen and (max-width: 680px) {
+        body .site-w {
+          padding: 0 23px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <link href="swiper-bundle.min.css" rel="stylesheet" />
+    <script src="swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    <div class="site-page">
+      <div class="site-w site-content">
+        <div class="early-booking">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/1.jpg" alt="" />
+                <div class="early-booking__content">
+                  <div class="early-booking__price">От 2 000 €</div>
+                  <div class="early-booking__heading">
+                    Pullman Maldives Maamutaa, Gaafu Dhaalu Atoll 5*
+                  </div>
+                  <div class="early-booking__text">
+                    Курортный отель с 2 бассейнами состоит из 2 вилл с
+                    подводными спальнями. Полет на самолете до международного
+                    аэропорта Мале занимает 15 минут. Курортный отель с 2
+                    бассейнами состоит из 2 вилл с подводными спальнями. Полет
+                    на самолете до международного аэропорта Мале занимает 15
+                    минут.
+                  </div>
+                </div>
+                <div class="early-booking__btn">
+                  <a href="" class="early-booking__button">Посмотреть цены</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/2.jpg" alt="" />
+                <div class="early-booking__content">
+                  <div class="early-booking__price">От 2 000 €</div>
+                  <div class="early-booking__heading">
+                    Pullman Maldives Maamutaa, Gaafu Dhaalu Atoll 5*
+                  </div>
+                  <div class="early-booking__text">
+                    Курортный отель с 2 бассейнами состоит из 2 вилл с
+                    подводными спальнями.
+                  </div>
+                </div>
+                <div class="early-booking__btn">
+                  <a href="" class="early-booking__button">Посмотреть цены</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/3.jpg" alt="" />
+                <div class="early-booking__content">
+                  <div class="early-booking__price">От 2 000 €</div>
+                  <div class="early-booking__heading">
+                    Pullman Maldives Maamutaa, Gaafu Dhaalu Atoll 5*
+                  </div>
+                  <div class="early-booking__text">
+                    Курортный отель с 2 бассейнами состоит из 2 вилл с
+                    подводными спальнями. Полет на самолете до международного
+                    аэропорта Мале занимает 15 минут.
+                  </div>
+                </div>
+                <div class="early-booking__btn">
+                  <a href="" class="early-booking__button">Посмотреть цены</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/4.jpg" alt="" />
+                <div class="early-booking__content">
+                  <div class="early-booking__price">От 2 000 €</div>
+                  <div class="early-booking__heading">
+                    Pullman Maldives Maamutaa, Gaafu Dhaalu Atoll 5*
+                  </div>
+                  <div class="early-booking__text">
+                    Курортный отель с 2 бассейнами состоит из 2 вилл с
+                    подводными спальнями. Полет на самолете до международного
+                    аэропорта Мале занимает 15 минут.
+                  </div>
+                </div>
+                <div class="early-booking__btn">
+                  <a href="" class="early-booking__button">Посмотреть цены</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/5.jpg" alt="" />
+                <div class="early-booking__content">
+                  <div class="early-booking__price">От 2 000 €</div>
+                  <div class="early-booking__heading">
+                    Pullman Maldives Maamutaa, Gaafu Dhaalu Atoll 5*
+                  </div>
+                  <div class="early-booking__text">
+                    Курортный отель с 2 бассейнами состоит из 2 вилл с
+                    подводными спальнями. Полет на самолете до международного
+                    аэропорта Мале занимает 15 минут.
+                  </div>
+                </div>
+                <div class="early-booking__btn">
+                  <a href="" class="early-booking__button">Посмотреть цены</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/1.jpg" alt="" />
+                <div class="early-booking__content">
+                  <div class="early-booking__price">От 2 000 €</div>
+                  <div class="early-booking__heading">
+                    Pullman Maldives Maamutaa, Gaafu Dhaalu Atoll 5*
+                  </div>
+                  <div class="early-booking__text">
+                    Курортный отель с 2 бассейнами состоит из 2 вилл с
+                    подводными спальнями. Полет на самолете до международного
+                    аэропорта Мале занимает 15 минут.
+                  </div>
+                </div>
+                <div class="early-booking__btn">
+                  <a href="" class="early-booking__button">Посмотреть цены</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-button-prev">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12.208"
+              height="32"
+              viewBox="0 0 12.208 32"
+            >
+              <path
+                class="a"
+                d="M10.837,32a.941.941,0,0,1-.781-1.467L19.835,16,10.056,1.467A.942.942,0,0,1,11.619.415L22.1,16,11.619,31.585A.941.941,0,0,1,10.837,32Z"
+                transform="translate(-9.896)"
+              />
+            </svg>
+          </div>
+          <div class="swiper-button-next">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12.208"
+              height="32"
+              viewBox="0 0 12.208 32"
+            >
+              <path
+                class="a"
+                d="M10.837,32a.941.941,0,0,1-.781-1.467L19.835,16,10.056,1.467A.942.942,0,0,1,11.619.415L22.1,16,11.619,31.585A.941.941,0,0,1,10.837,32Z"
+                transform="translate(-9.896)"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="ru" class="main">
+
+<head>
+    <title>Туроператор KMP Group</title>
+    <!--[if gte IE 9]>
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/><![endif]-->
+    <link href="favicon.ico" type="image/x-icon" rel="icon" />
+    <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <!--[if lte IE 9]>
+	    <script src="template/js/ie-html5.js"></script><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <!--placeholder style-->
+    <style>
+        .b-footer {
+            background-color: #142045;
+            padding: 40px 94px 0;
+            color: #fff;
+            font-size: 1.6rem;
+            line-height: 1.3
+        }
+        
+        .b-footer hr {
+            border: 0;
+            margin: 0;
+            padding: 10px 0
+        }
+        
+        .b-footer hr.i-line {
+            border-top: 2px solid rgba(0, 0, 0, .15);
+            padding: 0
+        }
+        
+        .b-footer hr.i-size-S {
+            padding: 5px 0
+        }
+        
+        .b-footer hr.i-size-L {
+            padding: 20px 0
+        }
+        
+        .b-footer__logo,
+        .b-footer h6:not( .visible-xs-block),
+        .b-footer .b-h6:not( .visible-xs-block),
+        .b-footer b,
+        .b-footer a,
+        .b-footer span,
+        .b-footer__subscribe-content {
+            display: block;
+            width: 100px;
+            background-color: rgba(0, 0, 0, .15);
+            color: rgba(0, 0, 0, .15);
+            font-size: 0
+        }
+        
+        .b-footer .b-footer__collapse-header span {
+            display: none
+        }
+        
+        .b-footer__logo {
+            height: 67px
+        }
+        
+        .b-footer .row h6,
+        .b-footer .row b,
+        .b-footer .row a,
+        .b-footer .row span {
+            height: 19px
+        }
+        
+        .b-footer .row a,
+        .b-footer .row span {
+            width: 200px
+        }
+        
+        .b-footer__subscribe-content {
+            width: 100%;
+            height: 45px
+        }
+        
+        .b-footer__logo img,
+        .b-footer__subscribe-content input[ type="email"],
+        .b-footer__subscribe-content button[ type="submit"],
+        .b-footer .b-footer__social .row a {
+            display: none
+        }
+        
+        .b-footer .b-footer__social {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, .15)
+        }
+        
+        .b-footer .row .b-footer__social a {
+            display: none
+        }
+        
+        .b-footer__map {
+            height: 450px;
+            background-color: rgba(0, 0, 0, .15)
+        }
+        
+        .b-footer hr.i-line {
+            border-color: rgba(0, 0, 0, .15)
+        }
+        
+        .b-footer__logo-block {
+            height: 65px;
+            background-color: rgba(0, 0, 0, .15)
+        }
+        
+        .b-footer__copyright {
+            background-color: #fff;
+            height: 65px;
+            font-size: 0
+        }
+        
+        @media(max-width: 767px) {
+            .b-footer .row h6.b-footer__xs-h6,
+            .b-footer .row b.b-footer__xs-h6,
+            .b-footer__xs-h6 {
+                border-bottom: none;
+                height: 40px;
+                background-color: rgba(0, 0, 0, .15);
+                color: rgba(0, 0, 0, .15);
+                font-size: 0;
+                margin-bottom: 10px
+            }
+            .b-footer__note {
+                height: 42px;
+                background-color: rgba(0, 0, 0, .15);
+                color: rgba(0, 0, 0, .15);
+                font-size: 0
+            }
+            .b-footer__map {
+                height: 150px
+            }
+            .b-footer__map,
+            .b-footer__copyright {
+                margin: 0 -20px
+            }
+        }
+    </style>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <link href="/bitrix/js/main/core/css/core.min.css?15172224482854" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css?1469451208121200" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css?146945120823409" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/slick/slick.css?15051784941776" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/bootstrap-select-1.12.4/css/bootstrap-select.min.css?15004546026650" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/simple-scrollbar-master/simple-scrollbar.css?1510817992788" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/magnific-popup/magnific-popup.css?14966143086951" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/jquery-ui-daterangepicker-0.6.0/jquery.comiseo.daterangepicker.css?14847378642504" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/css/fonts_googleapis.css?152897227315658" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/css/jquery-ui.css?152897227336536" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/css/ionicons.min.css?152897227351284" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/bitrix/panel/main/popup.min.css?151722244920704" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/components/bitrix/news.list/main_banner_custom/style.css?15810021162636" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/footer/style.css?15797738836317" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/components/bitrix/sender.subscribe/subscribe/style.min.css?15758868754395" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/bitrix/js/main/core/css/core_popup.min.css?151722244813169" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/bitrix/js/main/core/css/core_date.min.css?15172224489657" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/bitrix/js/main/core/css/core_panel.min.css?151722244862290" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/bitrix/panel/main/admin-public.min.css?151722244973341" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/bitrix/panel/main/hot_keys.min.css?15172224493150" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/bitrix/themes/.default/pubstyles.min.css?151722244846822" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/styles.css?15427945059843" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/template_styles.css?1573802057200304" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/custom.css?1579857628211" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/bitrix/js/fileman/sticker.min.css?151722255624594" type="text/css" data-template-style="true" rel="stylesheet" />
+    <script type="text/javascript">
+        if (!window.BX) window.BX = {};
+        if (!window.BX.message) window.BX.message = function(mess) {
+            if (typeof mess == 'object')
+                for (var i in mess) BX.message[i] = mess[i];
+            return true;
+        };
+    </script>
+    <script type="text/javascript">
+        (window.BX || top.BX).message({
+            'JS_CORE_LOADING': 'Загрузка...',
+            'JS_CORE_NO_DATA': '- Нет данных -',
+            'JS_CORE_WINDOW_CLOSE': 'Закрыть',
+            'JS_CORE_WINDOW_EXPAND': 'Развернуть',
+            'JS_CORE_WINDOW_NARROW': 'Свернуть в окно',
+            'JS_CORE_WINDOW_SAVE': 'Сохранить',
+            'JS_CORE_WINDOW_CANCEL': 'Отменить',
+            'JS_CORE_WINDOW_CONTINUE': 'Продолжить',
+            'JS_CORE_H': 'ч',
+            'JS_CORE_M': 'м',
+            'JS_CORE_S': 'с',
+            'JSADM_AI_HIDE_EXTRA': 'Скрыть лишние',
+            'JSADM_AI_ALL_NOTIF': 'Показать все',
+            'JSADM_AUTH_REQ': 'Требуется авторизация!',
+            'JS_CORE_WINDOW_AUTH': 'Войти',
+            'JS_CORE_IMAGE_FULL': 'Полный размер'
+        });
+    </script>
+    <script type="text/javascript">
+        (window.BX || top.BX).message({
+            'PULL_OLD_REVISION': 'Для продолжения корректной работы с сайтом необходимо перезагрузить страницу.'
+        });
+    </script>
+    <script type="text/javascript">
+        (window.BX || top.BX).message({
+            'WEEK_START': '1',
+            'AMPM_MODE': false
+        });
+        (window.BX || top.BX).message({
+            'MONTH_1': 'Январь',
+            'MONTH_2': 'Февраль',
+            'MONTH_3': 'Март',
+            'MONTH_4': 'Апрель',
+            'MONTH_5': 'Май',
+            'MONTH_6': 'Июнь',
+            'MONTH_7': 'Июль',
+            'MONTH_8': 'Август',
+            'MONTH_9': 'Сентябрь',
+            'MONTH_10': 'Октябрь',
+            'MONTH_11': 'Ноябрь',
+            'MONTH_12': 'Декабрь',
+            'MONTH_1_S': 'Января',
+            'MONTH_2_S': 'Февраля',
+            'MONTH_3_S': 'Марта',
+            'MONTH_4_S': 'Апреля',
+            'MONTH_5_S': 'Мая',
+            'MONTH_6_S': 'Июня',
+            'MONTH_7_S': 'Июля',
+            'MONTH_8_S': 'Августа',
+            'MONTH_9_S': 'Сентября',
+            'MONTH_10_S': 'Октября',
+            'MONTH_11_S': 'Ноября',
+            'MONTH_12_S': 'Декабря',
+            'MON_1': 'Янв',
+            'MON_2': 'Фев',
+            'MON_3': 'Мар',
+            'MON_4': 'Апр',
+            'MON_5': 'Май',
+            'MON_6': 'Июн',
+            'MON_7': 'Июл',
+            'MON_8': 'Авг',
+            'MON_9': 'Сен',
+            'MON_10': 'Окт',
+            'MON_11': 'Ноя',
+            'MON_12': 'Дек',
+            'DAY_OF_WEEK_0': 'Воскресенье',
+            'DAY_OF_WEEK_1': 'Понедельник',
+            'DAY_OF_WEEK_2': 'Вторник',
+            'DAY_OF_WEEK_3': 'Среда',
+            'DAY_OF_WEEK_4': 'Четверг',
+            'DAY_OF_WEEK_5': 'Пятница',
+            'DAY_OF_WEEK_6': 'Суббота',
+            'DOW_0': 'Вс',
+            'DOW_1': 'Пн',
+            'DOW_2': 'Вт',
+            'DOW_3': 'Ср',
+            'DOW_4': 'Чт',
+            'DOW_5': 'Пт',
+            'DOW_6': 'Сб',
+            'FD_SECOND_AGO_0': '#VALUE# секунд назад',
+            'FD_SECOND_AGO_1': '#VALUE# секунду назад',
+            'FD_SECOND_AGO_10_20': '#VALUE# секунд назад',
+            'FD_SECOND_AGO_MOD_1': '#VALUE# секунду назад',
+            'FD_SECOND_AGO_MOD_2_4': '#VALUE# секунды назад',
+            'FD_SECOND_AGO_MOD_OTHER': '#VALUE# секунд назад',
+            'FD_SECOND_DIFF_0': '#VALUE# секунд',
+            'FD_SECOND_DIFF_1': '#VALUE# секунда',
+            'FD_SECOND_DIFF_10_20': '#VALUE# секунд',
+            'FD_SECOND_DIFF_MOD_1': '#VALUE# секунда',
+            'FD_SECOND_DIFF_MOD_2_4': '#VALUE# секунды',
+            'FD_SECOND_DIFF_MOD_OTHER': '#VALUE# секунд',
+            'FD_MINUTE_AGO_0': '#VALUE# минут назад',
+            'FD_MINUTE_AGO_1': '#VALUE# минуту назад',
+            'FD_MINUTE_AGO_10_20': '#VALUE# минут назад',
+            'FD_MINUTE_AGO_MOD_1': '#VALUE# минуту назад',
+            'FD_MINUTE_AGO_MOD_2_4': '#VALUE# минуты назад',
+            'FD_MINUTE_AGO_MOD_OTHER': '#VALUE# минут назад',
+            'FD_MINUTE_DIFF_0': '#VALUE# минут',
+            'FD_MINUTE_DIFF_1': '#VALUE# минута',
+            'FD_MINUTE_DIFF_10_20': '#VALUE# минут',
+            'FD_MINUTE_DIFF_MOD_1': '#VALUE# минута',
+            'FD_MINUTE_DIFF_MOD_2_4': '#VALUE# минуты',
+            'FD_MINUTE_DIFF_MOD_OTHER': '#VALUE# минут',
+            'FD_MINUTE_0': '#VALUE# минут',
+            'FD_MINUTE_1': '#VALUE# минуту',
+            'FD_MINUTE_10_20': '#VALUE# минут',
+            'FD_MINUTE_MOD_1': '#VALUE# минуту',
+            'FD_MINUTE_MOD_2_4': '#VALUE# минуты',
+            'FD_MINUTE_MOD_OTHER': '#VALUE# минут',
+            'FD_HOUR_AGO_0': '#VALUE# часов назад',
+            'FD_HOUR_AGO_1': '#VALUE# час назад',
+            'FD_HOUR_AGO_10_20': '#VALUE# часов назад',
+            'FD_HOUR_AGO_MOD_1': '#VALUE# час назад',
+            'FD_HOUR_AGO_MOD_2_4': '#VALUE# часа назад',
+            'FD_HOUR_AGO_MOD_OTHER': '#VALUE# часов назад',
+            'FD_HOUR_DIFF_0': '#VALUE# часов',
+            'FD_HOUR_DIFF_1': '#VALUE# час',
+            'FD_HOUR_DIFF_10_20': '#VALUE# часов',
+            'FD_HOUR_DIFF_MOD_1': '#VALUE# час',
+            'FD_HOUR_DIFF_MOD_2_4': '#VALUE# часа',
+            'FD_HOUR_DIFF_MOD_OTHER': '#VALUE# часов',
+            'FD_YESTERDAY': 'вчера',
+            'FD_TODAY': 'сегодня',
+            'FD_TOMORROW': 'завтра',
+            'FD_DAY_AGO_0': '#VALUE# дней назад',
+            'FD_DAY_AGO_1': '#VALUE# день назад',
+            'FD_DAY_AGO_10_20': '#VALUE# дней назад',
+            'FD_DAY_AGO_MOD_1': '#VALUE# день назад',
+            'FD_DAY_AGO_MOD_2_4': '#VALUE# дня назад',
+            'FD_DAY_AGO_MOD_OTHER': '#VALUE# дней назад',
+            'FD_DAY_DIFF_0': '#VALUE# дней',
+            'FD_DAY_DIFF_1': '#VALUE# день',
+            'FD_DAY_DIFF_10_20': '#VALUE# дней',
+            'FD_DAY_DIFF_MOD_1': '#VALUE# день',
+            'FD_DAY_DIFF_MOD_2_4': '#VALUE# дня',
+            'FD_DAY_DIFF_MOD_OTHER': '#VALUE# дней',
+            'FD_DAY_AT_TIME': '#DAY# в #TIME#',
+            'FD_MONTH_AGO_0': '#VALUE# месяцев назад',
+            'FD_MONTH_AGO_1': '#VALUE# месяц назад',
+            'FD_MONTH_AGO_10_20': '#VALUE# месяцев назад',
+            'FD_MONTH_AGO_MOD_1': '#VALUE# месяц назад',
+            'FD_MONTH_AGO_MOD_2_4': '#VALUE# месяца назад',
+            'FD_MONTH_AGO_MOD_OTHER': '#VALUE# месяцев назад',
+            'FD_MONTH_DIFF_0': '#VALUE# месяцев',
+            'FD_MONTH_DIFF_1': '#VALUE# месяц',
+            'FD_MONTH_DIFF_10_20': '#VALUE# месяцев',
+            'FD_MONTH_DIFF_MOD_1': '#VALUE# месяц',
+            'FD_MONTH_DIFF_MOD_2_4': '#VALUE# месяца',
+            'FD_MONTH_DIFF_MOD_OTHER': '#VALUE# месяцев',
+            'FD_YEARS_AGO_0': '#VALUE# лет назад',
+            'FD_YEARS_AGO_1': '#VALUE# год назад',
+            'FD_YEARS_AGO_10_20': '#VALUE# лет назад',
+            'FD_YEARS_AGO_MOD_1': '#VALUE# год назад',
+            'FD_YEARS_AGO_MOD_2_4': '#VALUE# года назад',
+            'FD_YEARS_AGO_MOD_OTHER': '#VALUE# лет назад',
+            'FD_YEARS_DIFF_0': '#VALUE# лет',
+            'FD_YEARS_DIFF_1': '#VALUE# год',
+            'FD_YEARS_DIFF_10_20': '#VALUE# лет',
+            'FD_YEARS_DIFF_MOD_1': '#VALUE# год',
+            'FD_YEARS_DIFF_MOD_2_4': '#VALUE# года',
+            'FD_YEARS_DIFF_MOD_OTHER': '#VALUE# лет',
+            'CAL_BUTTON': 'Выбрать',
+            'CAL_TIME_SET': 'Установить время',
+            'CAL_TIME': 'Время',
+            'FD_LAST_SEEN_TOMORROW': 'завтра в #TIME#',
+            'FD_LAST_SEEN_NOW': 'только что',
+            'FD_LAST_SEEN_TODAY': 'сегодня в #TIME#',
+            'FD_LAST_SEEN_YESTERDAY': 'вчера в #TIME#',
+            'FD_LAST_SEEN_MORE_YEAR': 'более года назад'
+        });
+    </script>
+    <script type="text/javascript">
+        (window.BX || top.BX).message({
+            'ADMIN_INCLAREA_DBLCLICK': 'Двойной щелчок',
+            'ADMIN_SHOW_MODE_ON': 'включен',
+            'ADMIN_SHOW_MODE_OFF': 'выключен',
+            'AMDIN_SHOW_MODE_TITLE': 'Режим правки',
+            'ADMIN_SHOW_MODE_ON_HINT': 'Режим правки включен. На странице доступны элементы управления компонентами и включаемыми областями.',
+            'ADMIN_SHOW_MODE_OFF_HINT': 'Режим правки выключен'
+        });
+    </script>
+    <script type="text/javascript">
+        (window.BX || top.BX).message({
+            'LANGUAGE_ID': 'ru',
+            'FORMAT_DATE': 'DD.MM.YYYY',
+            'FORMAT_DATETIME': 'DD.MM.YYYY HH:MI:SS',
+            'COOKIE_PREFIX': 'BITRIX_SM',
+            'SERVER_TZ_OFFSET': '10800',
+            'SITE_ID': 's1',
+            'SITE_DIR': '/',
+            'USER_ID': '18',
+            'SERVER_TIME': '1581064077',
+            'USER_TZ_OFFSET': '0',
+            'USER_TZ_AUTO': 'Y',
+            'bitrix_sessid': '3f7e41ea2cf815127ae52ac2272d2dcb'
+        });
+    </script>
+
+    <script type="text/javascript" src="/bitrix/cache/js/s1/kmp/kernel_main/kernel_main.js?1581058149298080"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_db.min.js?15172224488699"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_frame_cache.min.js?151722244811191"></script>
+    <script type="text/javascript" src="/bitrix/js/main/jquery/jquery-2.1.3.min.min.js?151722244884283"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="/bitrix/cache/js/s1/kmp/kernel_pull/kernel_pull.js?158105814929914"></script>
+    <script type="text/javascript" src="/bitrix/js/fileman/sticker.min.js?151722255648559"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_admin.min.js?151722244821881"></script>
+    <script type="text/javascript" src="/bitrix/js/main/admin_tools.min.js?151722244845484"></script>
+    <script type="text/javascript" src="/bitrix/js/main/popup_menu.min.js?15172224489738"></script>
+    <script type="text/javascript" src="/bitrix/js/main/admin_search.min.js?15172224484820"></script>
+    <script type="text/javascript" src="/bitrix/js/main/hot_keys.min.js?151722244812333"></script>
+    <script type="text/javascript" src="/bitrix/js/main/public_tools.min.js?151722244824131"></script>
+    <script type="text/javascript">
+        BX.setJSList(['/bitrix/js/main/core/core.js', '/bitrix/js/main/core/core_ajax.js', '/bitrix/js/main/json/json2.min.js', '/bitrix/js/main/core/core_ls.js', '/bitrix/js/main/core/core_fx.js', '/bitrix/js/main/session.js', '/bitrix/js/main/core/core_window.js', '/bitrix/js/main/core/core_popup.js', '/bitrix/js/main/core/core_date.js', '/bitrix/js/main/utils.js', '/bitrix/js/pull/pull.js', '/local/components/kmp/tour.search/templates/main/script.js', '/local/templates/kmp/js/waitwindow.js', '/local/templates/kmp/libs/jquery-ui.min.js', '/local/templates/kmp/libs/jquery.ui.touch-punch.min.js', '/local/templates/kmp/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js', '/local/templates/kmp/libs/bootstrap-select-1.12.4/js/bootstrap-select.min.js', '/local/templates/kmp/libs/bootstrap-select-1.12.4/js/i18n/defaults-ru_RU.min.js', '/local/templates/kmp/libs/slick/slick.js', '/local/templates/kmp/libs/simple-scrollbar-master/simple-scrollbar.js', '/local/templates/kmp/libs/magnific-popup/jquery.magnific-popup.min.js', '/local/templates/kmp/libs/endless-scroll/endless-scroll.min.js', '/local/templates/kmp/libs/jquery-ui-daterangepicker-0.6.0/jquery.comiseo.daterangepicker.js', '/local/templates/kmp/libs/less.min.js', '/local/templates/kmp/libs/jquery.touchSwipe.min.js', '/local/templates/kmp/libs/float-panel/float-panel.js', '/local/templates/kmp/js/tools.js', '/local/templates/kmp/js/main.js', '/local/templates/kmp/libs/jquery.inputmask.bundle.js', '/local/templates/kmp/libs/jquery-validation/core.js', '/local/templates/kmp/libs/jquery-validation/localization/messages_ru.js', '/local/templates/kmp/js/dev.js', '/local/templates/kmp/js/main-slider.js', '/local/templates/kmp/components/bitrix/news.list/main_banner_custom/script.js', '/local/templates/kmp/libs/footer/jquery.lazyload.min.js', '/local/templates/kmp/libs/footer/script.js']);
+    </script>
+    <script type="text/javascript">
+        (function() {
+            "use strict";
+
+            var counter = function() {
+                var cookie = (function(name) {
+                    var parts = ("; " + document.cookie).split("; " + name + "=");
+                    if (parts.length == 2) {
+                        try {
+                            return JSON.parse(decodeURIComponent(parts.pop().split(";").shift()));
+                        } catch (e) {}
+                    }
+                })("BITRIX_CONVERSION_CONTEXT_s1");
+
+                if (cookie && cookie.EXPIRE >= BX.message("SERVER_TIME"))
+                    return;
+
+                var request = new XMLHttpRequest();
+                request.open("POST", "/bitrix/tools/conversion/ajax_counter.php", true);
+                request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                request.send(
+                    "SITE_ID=" + encodeURIComponent("s1") +
+                    "&sessid=" + encodeURIComponent(BX.bitrix_sessid()) +
+                    "&HTTP_REFERER=" + encodeURIComponent(document.referrer)
+                );
+            };
+
+            if (window.frameRequestStart === true)
+                BX.addCustomEvent("onFrameDataReceived", counter);
+            else
+                BX.ready(counter);
+        })();
+    </script>
+    <script type="text/javascript">
+        less = {
+            env: 'development'
+        };
+    </script>
+
+    <script type="text/javascript">
+        var phpVars = {
+            'ADMIN_THEME_ID': '.default',
+            'LANGUAGE_ID': 'ru',
+            'FORMAT_DATE': 'DD.MM.YYYY',
+            'FORMAT_DATETIME': 'DD.MM.YYYY HH:MI:SS',
+            'opt_context_ctrl': false,
+            'cookiePrefix': 'BITRIX_SM',
+            'titlePrefix': 'kmp.ru - ',
+            'bitrix_sessid': '3f7e41ea2cf815127ae52ac2272d2dcb',
+            'messHideMenu': 'Скрыть меню',
+            'messShowMenu': 'Показать меню',
+            'messHideButtons': 'Уменьшить кнопки',
+            'messShowButtons': 'Увеличить кнопки',
+            'messFilterInactive': 'Поиск не используется - показаны все записи',
+            'messFilterActive': 'Используется поиск - показаны только найденные записи',
+            'messFilterLess': 'Скрыть условие поиска',
+            'messLoading': 'Загрузка...',
+            'messMenuLoading': 'Загрузка...',
+            'messMenuLoadingTitle': 'Загружаются пункты меню...',
+            'messNoData': '- Нет данных -',
+            'messExpandTabs': 'Развернуть все вкладки на одну страницу',
+            'messCollapseTabs': 'Свернуть вкладки',
+            'messPanelFixOn': 'Зафиксировать панель на экране',
+            'messPanelFixOff': 'Открепить панель',
+            'messPanelCollapse': 'Скрыть панель',
+            'messPanelExpand': 'Показать панель'
+        };
+    </script>
+
+    <script type="text/javascript" src="/bitrix/cache/js/s1/kmp/template_f0c97eba90653fe23a04e3cd61f4db50/template_f0c97eba90653fe23a04e3cd61f4db50.js?1581062414880909"></script>
+    <script type="text/javascript" src="/bitrix/cache/js/s1/kmp/page_3fb96b01e20e69b0ebc24f15cb78b658/page_3fb96b01e20e69b0ebc24f15cb78b658.js?158105814913974"></script>
+    <script type="text/javascript">
+        bxSession.mess.messSessExpired = 'Ваш сеанс работы с сайтом завершен из-за отсутствия активности в течение 15 мин. Введенные на странице данные не будут сохранены. Скопируйте их перед тем, как закроете или обновите страницу.';
+        bxSession.Expand(900, '3f7e41ea2cf815127ae52ac2272d2dcb', true, 'c54337f01fe0a62f40f4e387462b6517');
+    </script>
+    <script type="text/javascript">
+        BX.bind(window, "load", function() {
+            BX.PULL.start({
+                'CHANNEL_ID': '0894073db15e770ccd8780ef1b110980',
+                'CHANNEL_DT': '1581058006',
+                'USER_ID': '18',
+                'LAST_ID': '0',
+                'PATH': '/bitrix/components/bitrix/pull.request/ajax.php?UPDATE_STATE',
+                'PATH_WS': '',
+                'PATH_COMMAND': '',
+                'METHOD': 'PULL',
+                'REVISION': '17',
+                'ERROR': ''
+            });
+        });
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PQJLMBF');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+
+    <div id="panel">
+    </div>
+    <!-- header begin -->
+    
+    <link href="./style-header.css" rel="stylesheet">
+    
+    <header class="main-page with-left-menu main-page--js">
+
+        <div class="header-top">
+            <div class="header-top-item">
+                <a href="mailto:kmp@kmp.ru">kmp@kmp.ru</a>
+                <br>
+                <div class="header-top-rates">
+                    <div>
+                        <span class="rate">USD: 64.438</span>
+                        <span class="rate">EUR: 71.139</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-top-item callback"><a href="tel:+74957211708" style="background-image: url( './images/tel.svg' );"></a></div>
+            <div class="header-top-item logo">
+                <span class="logotype">
+                  <img src="./images/logo.svg" alt="Туроператор КМП Групп">
+                </span>
+            </div>
+
+            <div class="header-top-item">
+                <a href="tel:+74957211707">+7 (495) 721 17 07</a> </div>
+
+            <div class="header-top-item cabinet">
+                <a target="_blank" href="https://kmponline.ru/" class="profile-link">Личный <br>кабинет</a>
+                <a href="#window-main-menu-id" class="link-tablet-menu tablet main-menu-popup--js">
+                  <img src="./images/menu.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="header-bottom desktop">
+            <div class="header-bottom-line"></div>
+            <div id="bxdynamic_LkGdQn_start" style="display:none"></div>
+            <nav class="header-menu">
+
+                <a href="/countries/" class="header-menu-item header-menu-item--js">Страны</a>
+
+                <a href="/tours/" class="header-menu-item header-menu-item--js">Туры</a>
+
+                <a href="/for-agencies/" class="header-menu-item header-menu-item--js">Агентствам</a>
+
+                <a href="/for-business/" class="header-menu-item header-menu-item--js">Business Travel</a>
+
+                <a href="/mice/" class="header-menu-item header-menu-item--js">MICE</a>
+
+                <a href="https://www.intercityservice.ru/" class="header-menu-item header-menu-item--js">Incoming</a>
+
+                <a href="/about/" class="header-menu-item header-menu-item--js">О компании</a>
+
+                <a href="/contacts/" class="header-menu-item header-menu-item--js">Контакты</a>
+
+            </nav>
+            <div class="header-menu-line" id="header-menu-line-id"></div>
+            <div id="bxdynamic_LkGdQn_end" style="display:none"></div>
+
+        </div>
+
+        <div class="header-video js--header-video mobile active">
+            <div class="header-video-container" id="header-video-container-id">
+                <!-- VIDEO -->
+                <div class="slider-video active" style="background-image: url('/main_video/outbound_tourism.jpg')">
+                    <video class="slider-video--js active" data-video-index="1" muted loop width="100%" autoplay poster="/main_video/outbound_tourism.jpg">
+                        <source src="/main_video/outbound_tourism.mp4" type="video/mp4">
+                        <source src="/main_video/outbound_tourism.webm" type="video/webm">
+                        <source src="/main_video/outbound_tourism.ogv" type="video/ogg"> </video>
+                </div>
+                <div class="slider-video" style="background-image: url('/main_video/business_travel1.jpg')">
+                    <video class="slider-video--js" data-video-index="2" muted loop width="100%" preload="none" poster="/main_video/business_travel1.jpg">
+                        <source src="/main_video/business_travel.mp4" type="video/mp4">
+                        <source src="/main_video/business_travel.webm" type="video/webm">
+                        <source src="/main_video/business_travel.ogv" type="video/ogg"> </video>
+                </div>
+                <div class="slider-video" style="background-image: url('/main_video/mice1.jpg')">
+                    <video class="slider-video--js" data-video-index="3" muted loop width="100%" preload="none" poster="/main_video/mice1.jpg">
+                        <source src="/main_video/mice.mp4" type="video/mp4">
+                        <source src="/main_video/mice.webm" type="video/webm">
+                        <source src="/main_video/mice.ogv" type="video/ogg"> </video>
+                </div>
+                <div class="slider-video" style="background-image: url('/main_video/incoming_tourism.jpg')">
+                    <video class="slider-video--js" data-video-index="4" muted loop width="100%" preload="none" poster="/main_video/incoming_tourism.jpg">
+                        <source src="/main_video/incoming_tourism.mp4" type="video/mp4">
+                        <source src="/main_video/incoming_tourism.webm" type="video/webm">
+                        <source src="/main_video/incoming_tourism.ogv" type="video/ogg"> </video>
+                </div>
+                <div class="slider-video" style="background-image: url('/main_video/france.jpg')">
+                    <video class="slider-video--js" data-video-index="5" muted loop width="100%" preload="none" poster="/main_video/france.jpg">
+                        <source src="/main_video/france.mp4" type="video/mp4">
+                        <source src="/main_video/france.webm" type="video/webm">
+                        <source src="/main_video/france.ogv" type="video/ogg"> </video>
+                </div>
+                <div class="slider-video" style="background-image: url('/main_video/israel.jpg')">
+                    <video class="slider-video--js" data-video-index="6" muted loop width="100%" preload="none" poster="/main_video/israel.jpg">
+                        <source src="/main_video/israel.mp4" type="video/mp4">
+                        <source src="/main_video/israel.webm" type="video/webm">
+                        <source src="/main_video/israel.ogv" type="video/ogg"> </video>
+                </div>
+                <div class="slider-video" style="background-image: url('/main_video/japan.jpg')">
+                    <video class="slider-video--js" data-video-index="7" muted loop width="100%" preload="none" poster="/main_video/japan.jpg">
+                        <source src="/main_video/japan.mp4" type="video/mp4">
+                        <source src="/main_video/japan.webm" type="video/webm">
+                        <source src="/main_video/japan.ogv" type="video/ogg"> </video>
+                </div>
+                <!-- END VIDEO -->
+            </div>
+        <!--</div>
+        <div class="header-video-shader-two"></div>
+        <div class="header-video-shader"></div>-->
+        <div class="header-slider">
+            <div class="header-slider-container header-slider--js">
+                <div class="header-slider-item header-slider-item--js">
+                    <div class="header-slider-title">
+                        <div class="hst-wrapper">
+                            Выездной туризм
+                            <br>
+                            <a href="/countries/" class="site-button white">Outbound tourism</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-slider-item header-slider-item--js">
+                    <div class="header-slider-title">
+                        <div class="hst-wrapper">
+                            Деловые путешествия
+                            <br>
+                            <a href="/for-business/" class="site-button white">Business travel</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-slider-item header-slider-item--js">
+                    <div class="header-slider-title">
+                        <div class="hst-wrapper">
+                            Организация мероприятий
+                            <br>
+                            <a href="/mice/" class="site-button white">MICE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-slider-item header-slider-item--js">
+                    <div class="header-slider-title">
+                        <div class="hst-wrapper">
+                            Прием иностранных туристов
+                            <br>
+                            <a href="https://www.intercityservice.ru/" class="site-button white">Incoming tourism</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-slider-item header-slider-item--js">
+                    <div class="header-slider-title">
+                        <div class="hst-wrapper">
+                            Туры во Францию
+                            <br>
+                            <a href="/countries/fr/" class="site-button white">выбрать тур</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-slider-item header-slider-item--js">
+                    <div class="header-slider-title">
+                        <div class="hst-wrapper">
+                            Туры в Израиль
+                            <br>
+                            <a href="/countries/il/" class="site-button white">выбрать тур</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-slider-item header-slider-item--js">
+                    <div class="header-slider-title">
+                        <div class="hst-wrapper">
+                            Туры в Японию
+                            <br>
+                            <a href="/countries/jp/" class="site-button white">выбрать тур</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- start /components/mobile-slide-menu/
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+        <div class="b-mobile-slide-menu">
+            <div class="b-mobile-slide-menu__slide-container">
+                <div class="b-msm-slide" data-num="1" style="background-image: url( 'images/outbound_tourism.jpg' );"></div>
+                <div class="b-msm-slide" data-num="2" style="background-image: url( 'images/business_travel1.jpg' );"></div>
+                <div class="b-msm-slide" data-num="3" style="background-image: url( 'images/mice1.jpg' );"></div>
+                <div class="b-msm-slide" data-num="4" style="background-image: url( 'images/incoming_tourism.jpg' );"></div>
+            </div>
+            <div class="b-mobile-slide-menu__menu-container">
+                <div class="b-msm-menu-item" data-num="1"><a href="">Выездной туризм</a></div>
+                <div class="b-msm-menu-item" data-num="2"><a href="">Деловые путешествия</a></div>
+                <div class="b-msm-menu-item" data-num="3"><a href="">Организация<br>мероприятий</a></div>
+                <div class="b-msm-menu-item" data-num="4"><a href="">Прием иностранных<br>туристов</a></div>
+            </div>
+            <div class="b-mobile-slide-menu__gradient"></div>
+            <div class="b-mobile-slide-menu__menu-center"></div>
+        </div>
+        <!-- end /components/mobile-slide-menu/-->
+        
+        <div class="header-slider-menu">
+            <nav class="header-slider-menu-list">
+                <a href="#" class="header-slider-menu-item header-slider-menu-item--js active default" data-slide-index="1">Выездной туризм</a>
+
+                <a href="#" class="header-slider-menu-item header-slider-menu-item--js" data-slide-index="2">Бизнес тревел</a>
+
+                <a href="#" class="header-slider-menu-item header-slider-menu-item--js" data-slide-index="3">Организация мероприятий</a>
+
+                <a href="#" class="header-slider-menu-item header-slider-menu-item--js" data-slide-index="4">Прием иностранных туристов</a>
+
+                <a href="#" class="header-slider-menu-item header-slider-menu-item--js" data-slide-index="5">Туры во Францию</a>
+
+                <a href="#" class="header-slider-menu-item header-slider-menu-item--js" data-slide-index="6">Туры в Израиль</a>
+
+                <a href="#" class="header-slider-menu-item header-slider-menu-item--js" data-slide-index="7">Туры в Японию</a>
+
+            </nav>
+            <div class="header-slider-menu-line" id="header-slider-menu-line-id"></div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- content begin -->
+    
+    <!-- start tour-list -->
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js"></script>
+    
+    <div class="b-tour-list" style="background-image: url( '../mobile-slide-menu/images/business_travel1.jpg' );">
+      <div class="b-tour-list__container">
+        <div class="main-title">Популярные направления</div>
+        <script src="swiper.min.js"></script>
+        <link rel="stylesheet" href="swiper.min.css"/>
+        
+        <div class="swiper-container"> 
+          <div class="swiper-wrapper">
+          
+            <div class="swiper-slide b-tour-list__column">
+              <a href="/countries/au/">Австралия</a>
+              <a href="/countries/at/">Австрия</a>
+              <a href="/countries/gb/">Великобритания</a>
+              <a href="/countries/il/">Израиль</a>
+            </div>
+            
+            <div class="swiper-slide b-tour-list__column">
+              <a href="/countries/id/">Индонезия</a>
+              <a href="/countries/es/">Испания</a>
+              <a href="/countries/it/">Италия</a>
+              <a href="/countries/mu/">Маврикий</a>
+            </div>
+            
+            <div class="swiper-slide b-tour-list__column">            
+              <a href="/countries/mv/">Мальдивы</a>
+              <a href="/countries/ae/">ОАЭ</a>
+              <a href="/countries/pt/">Португалия</a>
+              <a href="/countries/ru/">Россия</a>
+            </div>
+            
+            <div class="swiper-slide b-tour-list__column">
+              <a href="/countries/sc/">Сейшелы</a>
+              <a href="/countries/us/">США</a>
+              <a href="/countries/th/">Таиланд</a>
+              <a href="/countries/tr/">Турция</a>
+            </div>
+            
+            <div class="swiper-slide b-tour-list__column">
+              <a href="/countries/fr/">Франция</a>
+              <a href="/countries/ch/">Швейцария</a>
+              <a href="/countries/za/">ЮАР</a>
+              <a href="/countries/jp/">Япония</a>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="b-tour-list__button">
+          <a href="/countries/" class="b-button">Все страны</a>
+        </div>
+      </div>
+    </div>
+    <!-- end tour-list -->
+    
+    <p>Our comprehensive guide to CSS flexbox layout. This complete guide explains everything about flexbox, focusing on all the different possible properties for the parent element (the flex container) and the child elements (the flex items). It also includes history, demos, patterns, and a browser support chart.</p>
+    <p>This establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in horizontal rows or vertical columns.</p>
+    <p>This defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.</p>
+    <p>space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.</p>
+    <p>There are also two additional keywords you can pair with these values: safe and unsafe. Using safe ensures that however you do this type of positioning, you can't push an element such that it renders off-screen (e.g. off the top) in such a way the content can't be scrolled too (called "data loss").</p>
+    <p>The safe and unsafe modifier keywords can be used in conjunction with all the rest of these keywords (although note browser support), and deal with helping you prevent aligning elements such that the content becomes inaccessible.</p>
+    <p>The safe and unsafe modifier keywords can be used in conjunction with all the rest of these keywords (although note browser support), and deal with helping you prevent aligning elements such that the content becomes inaccessible.</p>
+    <p>If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children. If one of the children has a value of 2, the remaining space would take up twice as much space as the others (or it will try to, at least).</p>
+    <p>This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means "look at my width or height property" (which was temporarily done by the main-size keyword until deprecated). The content keyword means "size it based on the item's content" - this keyword isn't well supported yet, so it's hard to test and harder to know what its brethren max-content, min-content, and fit-content do.</p>
+    <p>I`ve got only a question. When you define main-axis you say that its direction depends on the justify-content property, but isn`t the flex-direction property that defines if flex items are layed out as a row or as a column? Am I misunderstanding something?</p>
+    <p>It`s not very clear how `order` actually works. `order: 3` doesn`t mean `put it at the third position`, it means `put it after any items with `order` less than 3 and before any items with `order` greater than 3`.</p>
+    <p>We (the Flexbox spec editors) strongly recommend not using the longhands of `flex` unless you really, really want to cascade in flex settings from some other style rule, so I`d suggest somehow discouraging the use of `flex-grow/shrink/basis` here (or, preferably, leaving it out/in an advanced section). The shorthand resets things in appropriate ways, and will therefore result in fewer cascading errors. Please use the shorthand!</p>
+    <div class="site-page">
+        <div class="site-w site-content">
+            <div class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+                <nav class="breadcrumbs">
+
+                    <div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a href="http://kmp.ru/" title="Главная" itemprop="item" class="breadcrumb_item b-item">
+                            <span itemprop="name">Главная</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </div>
+                    <span class="breadcrumb_item _delimeter b-separator">/</span>
+                    <div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a href="#" title="MICE" itemprop="item" class="breadcrumb_item b-item active">
+                            <span itemprop="name">MICE</span>
+                        </a>
+                        <meta itemprop="position" content="2" />
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+        <!-- site-w site-content -->
+    </div>
+    <!-- site-page -->
+
+    <!-- modal windows begin -->
+    <div class="modal-window-shade" id="window-shade-id"></div>
+
+    <div class="modal-windows">
+
+        <!-- window auth begin -->
+        <div class="modal-window" id="window-auth-id">
+            <div class="mw-content">
+
+                <div class="mw-title">Авторизация</div>
+
+                <div class="flex-list">
+                    <div class="mw-half-window">
+                        <p>Войти через социальные сети</p>
+                        <a href="#" class="site-button social facebook">Facebook</a>
+                        <a href="#" class="site-button social vk">Вконтакте</a>
+                        <a href="#" class="site-button social google">Google</a>
+                        <a href="#" class="site-button social ok">Однокласники</a>
+                    </div>
+                    <div class="mw-half-window">
+                        <p>С помощью эл. почты</p>
+
+                        <div class="site-form">
+                            <div class="form-field simple-bottom">
+                                <input type="email" name="email" placeholder="Эл. почта">
+                            </div>
+                            <div class="form-field simple-bottom">
+                                <input type="password" name="pass" placeholder="Пароль">
+                            </div>
+                            <button type="submit" class="site-button orange margin-small ib">Войти</button>
+                        </div>
+
+                    </div>
+                    <a href="#window-register-id" class="mw-bottom-link left popup-modal--js">Регистрация</a>
+                    <a href="#window-password-recovery-id" class="mw-bottom-link right popup-modal--js">Забыли пароль?</a>
+                </div>
+
+            </div>
+            <div class="mw-close modal-window-close--js"></div>
+        </div>
+        <!-- window auth end -->
+    </div>
+    <!-- window main-menu begin -->
+    <div class="modal-window window-main-menu" id="window-main-menu-id">
+        <div class="mw-main-menu-title">
+            <a href="#" class="link-tablet-menu main-menu-popup--js">
+            Меню
+            <div class="menu-link open"><div></div><div></div><div></div></div>
+        </a>
+        </div>
+        <div class="mw-main-menu">
+
+            <div id="bxdynamic_NMQc3w_start" style="display:none"></div>
+            <div class="mc-main-menu-content content--js">
+
+                <a href="/countries/" class="header-menu-item header-menu-item--js">Страны</a>
+
+                <a href="/tours/" class="header-menu-item header-menu-item--js">Туры</a>
+
+                <a href="/for-agencies/" class="header-menu-item header-menu-item--js">Агентствам</a>
+
+                <a href="/for-business/" class="header-menu-item header-menu-item--js">Business Travel</a>
+
+                <a href="/mice/" class="header-menu-item header-menu-item--js active default">MICE</a>
+
+                <a href="https://www.intercityservice.ru/" class="header-menu-item header-menu-item--js">Incoming</a>
+
+                <a href="/about/" class="header-menu-item header-menu-item--js">О компании</a>
+
+                <a href="/contacts/" class="header-menu-item header-menu-item--js">Контакты</a>
+
+            </div>
+            <div id="bxdynamic_NMQc3w_end" style="display:none"></div>
+        </div>
+    </div>
+    <!-- window main-menu end -->
+    <!-- modal windows end -->
+
+</body>
+
+</html>
+<!--2440fe274b1a8afd9b83946bf949188a-->

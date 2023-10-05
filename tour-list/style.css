@@ -1,0 +1,126 @@
+.b-tour-list {
+  overflow: hidden;
+  background-color: #152144;
+  background-repeat: no-repeat;
+  background-position: center 120%;
+}
+@media( min-width: 861px ) {
+  .b-tour-list {
+    display: none;
+  }
+}
+@media( max-width: 860px ) {
+  .main-countries,
+  .main-darkblue > .main-title {
+    display: none;
+  }
+  
+  .main-darkblue {
+    padding-top: 0 !important;
+  }
+}
+.b-tour-list .swiper-container {
+  transform: translateX(100px);
+  -webkit-transform: translateX(100px);
+  -moz-transform: translateX(100px);
+  -ms-transform: translateX(100px);
+  opacity: 0;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  text-align: left;
+}
+.b-tour-list.i-animate .swiper-container {
+  opacity: 1;
+  transform: translate(0);
+  -webkit-transform: translate(0);
+  -moz-transform: translate(0);
+  -ms-transform: translate(0);
+}
+.b-tour-list__container {
+  position: relative;
+  padding: 80px 0 0;
+  background: linear-gradient( 0deg,#142045 35%,#142045aa );
+}
+
+.b-tour-list__column {
+  width: 120px;
+  float: left;
+}
+
+.b-tour-list__column a {
+  display: block;
+  font-size: 12pt;
+  line-height: 1.1;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.b-tour-list__column a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.b-tour-list .swiper-wrapper {
+  padding-left: 15px;
+}
+
+.b-tour-list .swiper-wrapper:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.b-tour-list .main-title {
+  color: #fff;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.b-tour-list__button {
+  padding: 40px 0 60px;
+  text-align: center;
+}
+
+.b-tour-list .b-button {
+  transform: translateY( 30px );
+  -webkit-transform: translateY( 30px );
+  -moz-transform: translateY( 30px );
+  -ms-transform: translateY( 30px );
+  opacity: 0;
+}
+
+.b-tour-list.i-animate-button .b-button {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  opacity: 1;
+}
+
+.b-button {
+  display: inline-block;
+  line-height: 56px;
+  text-align: center;
+  color: #fff;
+  font-size: 12pt;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f00;
+  /*border-radius: 28px;*/
+  text-decoration: none;
+  min-width: 222px;
+  transition: all 0.5s ease 1s;
+  -webkit-transition: all 0.5s ease 1s;
+  -moz-transition: all 0.5s ease 1s;
+  -ms-transition: all 0.5s ease 1s;
+}
+
+.b-button:hover,
+.b-button:active {
+  background-color: #ad1c1c;
+  color: #fff;
+  text-decoration: none;
+}

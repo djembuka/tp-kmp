@@ -1,0 +1,86 @@
+header.main-page .header-top-item .logotype img {
+  width: 150px;
+  height: auto;
+}
+
+@media( max-width: 860px ) {
+    
+  header {
+    background: #142045 !important;
+    transition: margin-top .3s ease;
+    -webkit-transition: margin-top .3s ease;
+    -moz-transition: margin-top .3s ease;
+    -ms-transition: margin-top .3s ease;
+  }
+  
+  header.main-page .header-top {
+    z-index: 101;
+  }
+  
+  .window-main-menu {
+    z-index: 102;
+  }
+  
+  header.main-page .header-top-item .link-tablet-menu img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  header.main-page .header-slider,
+  header.main-page .header-video-shader-two,
+  header.main-page .header-video-shader,
+  header.main-page .header-video.active  {
+    display: none;
+  }
+  
+  header.main-page .header-top-item .link-tablet-menu {
+    top: 35px;
+    right: -14px;
+  }
+  
+  header.main-page .header-top {
+    border: none;
+    background: transparent;
+  }
+  
+  header .header-top-item.callback a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  header .header-top-item.callback {
+    padding-top: 0;
+    position: absolute;
+    top: 35px;
+    right: 78px;
+    width: auto;
+    height: auto;
+  }
+  
+  header .header-top-item.logo {
+    padding-top: 0;
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    width: auto;
+    height: auto;
+  }
+  
+  header.main-page .header-top-item .logotype {
+    display: block;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+  
+  header.main-page .header-top-item .logotype img {
+    max-width: 100%;
+    width: 90px;
+    height: auto;
+  }
+  
+}

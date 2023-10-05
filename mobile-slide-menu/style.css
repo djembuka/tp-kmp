@@ -1,0 +1,179 @@
+html.i-overflow-hidden,
+html.i-overflow-hidden body {
+  overflow: hidden;
+}
+.b-mobile-slide-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  opacity: 0;
+  z-index: 100;
+}
+.b-mobile-slide-menu.i-loaded {
+  opacity: 1;
+}
+@media (min-width: 861px) {
+  .b-mobile-slide-menu {
+    display: none;
+  }
+}
+.b-mobile-slide-menu.i-hidden {
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+}
+.b-mobile-slide-menu__slide-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.b-mobile-slide-menu__menu-container {
+  position: absolute;
+  top: calc(50% - 20px - 35px);
+  left: 20px;
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  width: 90%;
+  z-index: 5;
+}
+.b-mobile-slide-menu .b-msm-slide {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  z-index: 0;
+}
+.b-mobile-slide-menu .b-msm-slide.i-sub {
+  z-index: 2;
+}
+.b-mobile-slide-menu .b-msm-slide.i-active {
+  z-index: 3;
+}
+.b-mobile-slide-menu .b-msm-slide.i-animate {
+  opacity: 0;
+}
+.b-mobile-slide-menu .b-msm-menu-item {
+  color: #fff;
+  line-height: 75px;
+  opacity: 1;
+  transition: all 1.5s ease;
+  -webkit-transition: all 1.5s ease;
+  -moz-transition: all 1.5s ease;
+  -ms-transition: all 1.5s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.b-mobile-slide-menu .b-msm-menu-item a {
+  font-size: 2rem;
+  font-weight: 400;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.15;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  max-width: 210px;
+}
+.b-mobile-slide-menu .b-msm-menu-item a,
+.b-mobile-slide-menu .b-msm-menu-item a:focus,
+.b-mobile-slide-menu .b-msm-menu-item a:active {
+  color: #fff;
+  text-decoration: none;
+}
+.b-mobile-slide-menu .b-msm-menu-item.i-active {
+  transform: translateX(20px);
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  opacity: 1 !important;
+}
+.b-mobile-slide-menu .b-msm-menu-item.i-active a {
+  font-size: 3rem;
+  font-weight: 500;
+  max-width: 95%;
+}
+.b-mobile-slide-menu .b-msm-menu-item.i-hidden {
+  opacity: 0;
+}
+.b-mobile-slide-menu__gradient {
+  background: linear-gradient(180deg, #142045, transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 4;
+}
+.b-mobile-slide-menu__menu-center {
+  position: absolute;
+  top: calc(50% - 20px - 30px);
+  left: 0;
+  width: 15px;
+  height: 60px;
+  pointer-events: none;
+  background-color: #f00;
+  border-radius: 0 15px 15px 0;
+  z-index: 5;
+}
+.b-mobile-slide-menu__scroll-down {
+  position: absolute;
+  bottom: 31px;
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: translateY( 20px );
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  opacity: 0;
+  transition: all .5s ease 3s;
+  z-index: 5;
+}
+
+header .header-top-item.callback,
+header .link-tablet-menu {
+  transform: translateY(-20px);
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  opacity: 0;
+  transition: all .5s ease 2s !important;
+}
+
+header.i-loaded .header-top-item.callback,
+header.i-loaded .link-tablet-menu,
+header.i-loaded .b-mobile-slide-menu__scroll-down {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  opacity: 1;
+}

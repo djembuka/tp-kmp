@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="ru" class="main">
+
+<head>
+    <title>Туроператор KMP Group</title>
+    <!--[if gte IE 9]>
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/><![endif]-->
+    <link href="favicon.ico" type="image/x-icon" rel="icon" />
+    <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <!--[if lte IE 9]>
+	    <script src="template/js/ie-html5.js"></script><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <!--placeholder style-->
+    <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=KMEAlGdVVnzqCFie4M3bt3WSNVMr_IhOSilxhY6ayXo" charset="UTF-8"></script>
+    <style>
+        .b-footer {
+            background-color: #142045;
+            padding: 40px 94px 0;
+            color: #fff;
+            font-size: 1.6rem;
+            line-height: 1.3
+        }
+        
+        .b-footer hr {
+            border: 0;
+            margin: 0;
+            padding: 10px 0
+        }
+        
+        .b-footer hr.i-line {
+            border-top: 2px solid rgba(0, 0, 0, .15);
+            padding: 0
+        }
+        
+        .b-footer hr.i-size-S {
+            padding: 5px 0
+        }
+        
+        .b-footer hr.i-size-L {
+            padding: 20px 0
+        }
+        
+        .b-footer__logo,
+        .b-footer h6:not( .visible-xs-block),
+        .b-footer .b-h6:not( .visible-xs-block),
+        .b-footer b,
+        .b-footer a,
+        .b-footer span,
+        .b-footer__subscribe-content {
+            display: block;
+            width: 100px;
+            background-color: rgba(0, 0, 0, .15);
+            color: rgba(0, 0, 0, .15);
+            font-size: 0
+        }
+        
+        .b-footer .b-footer__collapse-header span {
+            display: none
+        }
+        
+        .b-footer__logo {
+            height: 67px
+        }
+        
+        .b-footer .row h6,
+        .b-footer .row b,
+        .b-footer .row a,
+        .b-footer .row span {
+            height: 19px
+        }
+        
+        .b-footer .row a,
+        .b-footer .row span {
+            width: 200px
+        }
+        
+        .b-footer__subscribe-content {
+            width: 100%;
+            height: 45px
+        }
+        
+        .b-footer__logo img,
+        .b-footer__subscribe-content input[ type="email"],
+        .b-footer__subscribe-content button[ type="submit"],
+        .b-footer .b-footer__social .row a {
+            display: none
+        }
+        
+        .b-footer .b-footer__social {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, .15)
+        }
+        
+        .b-footer .row .b-footer__social a {
+            display: none
+        }
+        
+        .b-footer__map {
+            height: 450px;
+            background-color: rgba(0, 0, 0, .15)
+        }
+        
+        .b-footer hr.i-line {
+            border-color: rgba(0, 0, 0, .15)
+        }
+        
+        .b-footer__logo-block {
+            height: 65px;
+            background-color: rgba(0, 0, 0, .15)
+        }
+        
+        .b-footer__copyright {
+            background-color: #fff;
+            height: 65px;
+            font-size: 0
+        }
+        
+        @media(max-width: 767px) {
+            .b-footer .row h6.b-footer__xs-h6,
+            .b-footer .row b.b-footer__xs-h6,
+            .b-footer__xs-h6 {
+                border-bottom: none;
+                height: 40px;
+                background-color: rgba(0, 0, 0, .15);
+                color: rgba(0, 0, 0, .15);
+                font-size: 0;
+                margin-bottom: 10px
+            }
+            .b-footer__note {
+                height: 42px;
+                background-color: rgba(0, 0, 0, .15);
+                color: rgba(0, 0, 0, .15);
+                font-size: 0
+            }
+            .b-footer__map {
+                height: 150px
+            }
+            .b-footer__map,
+            .b-footer__copyright {
+                margin: 0 -20px
+            }
+        }
+    </style>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <script type="text/javascript" data-skip-moving="true">
+        (function(w, d) {
+            var v = w.frameCacheVars = {
+                'CACHE_MODE': 'HTMLCACHE',
+                'storageBlocks': [],
+                'dynamicBlocks': {
+                    'LkGdQn': '8e873609bf1a',
+                    'KbYCcw': 'dc5ae9024726',
+                    'XEVOpk': 'efaa37aaed7f',
+                    'g8taYv': '66f5773eef76',
+                    'sender-subscribe': '208d71a44a5c',
+                    'rIpOz9': '1385f3ea13c7'
+                },
+                'AUTO_UPDATE': true,
+                'AUTO_UPDATE_TTL': '120'
+            };
+            var inv = false;
+            if (v.AUTO_UPDATE === false) {
+                if (v.AUTO_UPDATE_TTL && v.AUTO_UPDATE_TTL > 0) {
+                    var lm = Date.parse(d.lastModified);
+                    if (!isNaN(lm)) {
+                        var td = new Date().getTime();
+                        if ((lm + v.AUTO_UPDATE_TTL * 1000) >= td) {
+                            w.frameRequestStart = false;
+                            w.preventAutoUpdate = true;
+                            return;
+                        }
+                        inv = true;
+                    }
+                } else {
+                    w.frameRequestStart = false;
+                    w.preventAutoUpdate = true;
+                    return;
+                }
+            }
+            var r = w.XMLHttpRequest ? new XMLHttpRequest() : (w.ActiveXObject ? new w.ActiveXObject("Microsoft.XMLHTTP") : null);
+            if (!r) {
+                return;
+            }
+            w.frameRequestStart = true;
+            var m = v.CACHE_MODE;
+            var l = w.location;
+            var x = new Date().getTime();
+            var q = "?bxrand=" + x + (l.search.length > 0 ? "&" + l.search.substring(1) : "");
+            var u = l.protocol + "//" + l.host + l.pathname + q;
+            r.open("GET", u, true);
+            r.setRequestHeader("BX-ACTION-TYPE", "get_dynamic");
+            r.setRequestHeader("BX-CACHE-MODE", m);
+            r.setRequestHeader("BX-CACHE-BLOCKS", v.dynamicBlocks ? JSON.stringify(v.dynamicBlocks) : "");
+            if (inv) {
+                r.setRequestHeader("BX-INVALIDATE-CACHE", "Y");
+            }
+            try {
+                r.setRequestHeader("BX-REF", d.referrer || "");
+            } catch (e) {}
+            if (m === "APPCACHE") {
+                r.setRequestHeader("BX-APPCACHE-PARAMS", JSON.stringify(v.PARAMS));
+                r.setRequestHeader("BX-APPCACHE-URL", v.PAGE_URL ? v.PAGE_URL : "");
+            }
+            r.onreadystatechange = function() {
+                if (r.readyState != 4) {
+                    return;
+                }
+                var a = r.getResponseHeader("BX-RAND");
+                var b = w.BX && w.BX.frameCache ? w.BX.frameCache : false;
+                if (a != x || !((r.status >= 200 && r.status < 300) || r.status === 304 || r.status === 1223 || r.status === 0)) {
+                    var f = {
+                        error: true,
+                        reason: a != x ? "bad_rand" : "bad_status",
+                        url: u,
+                        xhr: r,
+                        status: r.status
+                    };
+                    if (w.BX && w.BX.ready) {
+                        BX.ready(function() {
+                            setTimeout(function() {
+                                BX.onCustomEvent("onFrameDataRequestFail", [f]);
+                            }, 0);
+                        });
+                    } else {
+                        w.frameRequestFail = f;
+                    }
+                    return;
+                }
+                if (b) {
+                    b.onFrameDataReceived(r.responseText);
+                    if (!w.frameUpdateInvoked) {
+                        b.update(false);
+                    }
+                    w.frameUpdateInvoked = true;
+                } else {
+                    w.frameDataString = r.responseText;
+                }
+            };
+            r.send();
+        })(window, document);
+    </script>
+
+    <link href="/bitrix/js/main/core/css/core.min.css?15172224482854" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css?1469451208121200" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css?146945120823409" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/slick/slick.css?15051784941776" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/bootstrap-select-1.12.4/css/bootstrap-select.min.css?15004546026650" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/simple-scrollbar-master/simple-scrollbar.css?1510817992788" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/magnific-popup/magnific-popup.css?14966143086951" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/jquery-ui-daterangepicker-0.6.0/jquery.comiseo.daterangepicker.css?14847378642504" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/css/fonts_googleapis.css?152897227315658" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/css/jquery-ui.css?152897227336536" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/css/ionicons.min.css?152897227351284" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/libs/footer/style.css?15797738836317" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/components/bitrix/sender.subscribe/subscribe/style.min.css?15758868754395" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/styles.css?15427945059843" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/template_styles.css?1573802057200304" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link href="/local/templates/kmp/custom.css?1579857628211" type="text/css" data-template-style="true" rel="stylesheet" />
+    <script type="text/javascript">
+        if (!window.BX) window.BX = {};
+        if (!window.BX.message) window.BX.message = function(mess) {
+            if (typeof mess == 'object')
+                for (var i in mess) BX.message[i] = mess[i];
+            return true;
+        };
+    </script>
+    <script type="text/javascript">
+        (window.BX || top.BX).message({
+            'JS_CORE_LOADING': 'Загрузка...',
+            'JS_CORE_NO_DATA': '- Нет данных -',
+            'JS_CORE_WINDOW_CLOSE': 'Закрыть',
+            'JS_CORE_WINDOW_EXPAND': 'Развернуть',
+            'JS_CORE_WINDOW_NARROW': 'Свернуть в окно',
+            'JS_CORE_WINDOW_SAVE': 'Сохранить',
+            'JS_CORE_WINDOW_CANCEL': 'Отменить',
+            'JS_CORE_WINDOW_CONTINUE': 'Продолжить',
+            'JS_CORE_H': 'ч',
+            'JS_CORE_M': 'м',
+            'JS_CORE_S': 'с',
+            'JSADM_AI_HIDE_EXTRA': 'Скрыть лишние',
+            'JSADM_AI_ALL_NOTIF': 'Показать все',
+            'JSADM_AUTH_REQ': 'Требуется авторизация!',
+            'JS_CORE_WINDOW_AUTH': 'Войти',
+            'JS_CORE_IMAGE_FULL': 'Полный размер'
+        });
+    </script>
+    <script type="text/javascript">
+        (window.BX || top.BX).message({
+            'LANGUAGE_ID': 'ru',
+            'FORMAT_DATE': 'DD.MM.YYYY',
+            'FORMAT_DATETIME': 'DD.MM.YYYY HH:MI:SS',
+            'COOKIE_PREFIX': 'BITRIX_SM',
+            'SERVER_TZ_OFFSET': '10800',
+            'SITE_ID': 's1',
+            'SITE_DIR': '/'
+        });
+    </script>
+
+    <script type="text/javascript" src="/bitrix/cache/js/s1/kmp/kernel_main/kernel_main.js?1581101301298080"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_db.min.js?15172224488699"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_frame_cache.min.js?151722244811191"></script>
+    <script type="text/javascript" src="/bitrix/js/main/jquery/jquery-2.1.3.min.min.js?151722244884283"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript">
+        BX.setJSList(['/bitrix/js/main/core/core.js', '/bitrix/js/main/core/core_ajax.js', '/bitrix/js/main/json/json2.min.js', '/bitrix/js/main/core/core_ls.js', '/bitrix/js/main/core/core_fx.js', '/bitrix/js/main/session.js', '/bitrix/js/main/core/core_window.js', '/bitrix/js/main/core/core_popup.js', '/bitrix/js/main/core/core_date.js', '/bitrix/js/main/utils.js', '/local/components/kmp/tour.search/templates/main/script.js', '/local/templates/kmp/js/waitwindow.js', '/local/templates/kmp/libs/jquery-ui.min.js', '/local/templates/kmp/libs/jquery.ui.touch-punch.min.js', '/local/templates/kmp/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js', '/local/templates/kmp/libs/bootstrap-select-1.12.4/js/bootstrap-select.min.js', '/local/templates/kmp/libs/bootstrap-select-1.12.4/js/i18n/defaults-ru_RU.min.js', '/local/templates/kmp/libs/slick/slick.js', '/local/templates/kmp/libs/simple-scrollbar-master/simple-scrollbar.js', '/local/templates/kmp/libs/magnific-popup/jquery.magnific-popup.min.js', '/local/templates/kmp/libs/endless-scroll/endless-scroll.min.js', '/local/templates/kmp/libs/jquery-ui-daterangepicker-0.6.0/jquery.comiseo.daterangepicker.js', '/local/templates/kmp/libs/less.min.js', '/local/templates/kmp/libs/jquery.touchSwipe.min.js', '/local/templates/kmp/libs/float-panel/float-panel.js', '/local/templates/kmp/js/tools.js', '/local/templates/kmp/js/main.js', '/local/templates/kmp/libs/jquery.inputmask.bundle.js', '/local/templates/kmp/libs/jquery-validation/core.js', '/local/templates/kmp/libs/jquery-validation/localization/messages_ru.js', '/local/templates/kmp/js/dev.js', '/local/templates/kmp/js/main-slider.js', '/local/templates/kmp/libs/footer/jquery.lazyload.min.js', '/local/templates/kmp/libs/footer/script.js']);
+    </script>
+    <script type="text/javascript">
+        (function() {
+            "use strict";
+
+            var counter = function() {
+                var cookie = (function(name) {
+                    var parts = ("; " + document.cookie).split("; " + name + "=");
+                    if (parts.length == 2) {
+                        try {
+                            return JSON.parse(decodeURIComponent(parts.pop().split(";").shift()));
+                        } catch (e) {}
+                    }
+                })("BITRIX_CONVERSION_CONTEXT_s1");
+
+                if (cookie && cookie.EXPIRE >= BX.message("SERVER_TIME"))
+                    return;
+
+                var request = new XMLHttpRequest();
+                request.open("POST", "/bitrix/tools/conversion/ajax_counter.php", true);
+                request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                request.send(
+                    "SITE_ID=" + encodeURIComponent("s1") +
+                    "&sessid=" + encodeURIComponent(BX.bitrix_sessid()) +
+                    "&HTTP_REFERER=" + encodeURIComponent(document.referrer)
+                );
+            };
+
+            if (window.frameRequestStart === true)
+                BX.addCustomEvent("onFrameDataReceived", counter);
+            else
+                BX.ready(counter);
+        })();
+    </script>
+    <script type="text/javascript">
+        less = {
+            env: 'development'
+        };
+    </script>
+
+    <script type="text/javascript" src="/bitrix/cache/js/s1/kmp/template_a26469d2b2751fd14e43c845facf480e/template_a26469d2b2751fd14e43c845facf480e.js?1581101147877955"></script>
+    <script type="text/javascript" src="/bitrix/cache/js/s1/kmp/page_3fb96b01e20e69b0ebc24f15cb78b658/page_3fb96b01e20e69b0ebc24f15cb78b658.js?158110114713974"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PQJLMBF');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+
+    <div id="panel">
+    </div>
+    <!-- header begin -->
+    <header class="main-page with-left-menu main-page--js">
+
+        <div class="header-top">
+            <div class="header-top-item">
+                <a href="mailto:kmp@kmp.ru">kmp@kmp.ru</a>
+                <br>
+                <div class="header-top-rates">
+                    <div>
+                        <span class="rate">USD: 65.046</span>
+                        <span class="rate">EUR: 71.219</span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-top-item callback"><a href="/callback/" class="js-modal">Заказать звонок</a></div>
+            <div class="header-top-item logo">
+                <span class="logotype">
+							<img src="/local/templates/kmp/images/logotype.png" alt="Туроператор КМП Групп">
+							</span>
+            </div>
+            <div class="header-top-item">
+                <a href="tel:+74957211707">+7 (495) 721 17 07</a> </div>
+            <div class="header-top-item cabinet">
+                <a target="_blank" href="https://kmponline.ru/" class="profile-link">Личный <br>кабинет</a>
+                <a href="#window-main-menu-id" class="link-tablet-menu tablet main-menu-popup--js">
+            	                Меню<div class="menu-link"><div></div><div></div><div></div></div>
+                            </a>
+            </div>
+        </div>
+        <div class="header-bottom desktop">
+            <div class="header-bottom-line"></div>
+            <div id="bxdynamic_LkGdQn_start" style="display:none"></div>
+            <nav class="header-menu">
+
+                <a href="/countries/" class="header-menu-item header-menu-item--js">Страны</a>
+
+                <a href="/tours/" class="header-menu-item header-menu-item--js">Туры</a>
+
+                <a href="/for-agencies/" class="header-menu-item header-menu-item--js">Агентствам</a>
+
+                <a href="/for-business/" class="header-menu-item header-menu-item--js">Business Travel</a>
+
+                <a href="/mice/" class="header-menu-item header-menu-item--js">MICE</a>
+
+                <a href="https://www.intercityservice.ru/" class="header-menu-item header-menu-item--js">Incoming</a>
+
+                <a href="/about/" class="header-menu-item header-menu-item--js">О компании</a>
+
+                <a href="/contacts/" class="header-menu-item header-menu-item--js">Контакты</a>
+
+            </nav>
+            <div class="header-menu-line" id="header-menu-line-id"></div>
+            <div id="bxdynamic_LkGdQn_end" style="display:none"></div>
+        </div>
+
+        <div class="header-video js--header-video">
+            <div class="header-video-container" id="header-video-container-id">
+                <!-- VIDEO -->
+                <div class="slider-video active" style="background-image: url('/main_video/outbound_tourism.jpg')">
+                    <video class="slider-video--js active" data-video-index="1" muted loop width="100%" autoplay poster="/main_video/outbound_tourism.jpg">
+                        <source src="/main_video/outbound_tourism.mp4" type="video/mp4">
+                        <source src="/main_video/outbound_tourism.webm" type="video/webm">
+                        <source src="/main_video/outbound_tourism.ogv" type="video/ogg"> </video>
+                </div>
+                <div class="slider-video" style="background-image: url('/main_video/business_travel1.jpg')">
+                    <video class="slider-video--js" data-video-index="2" muted loop width="100%" preload="none" poster="/main_video/business_travel1.jpg">
+                        <source src="/main_video/business_travel.mp4" type="video/mp4">
+                        <source src="/main_video/business_travel.webm" type="video/webm">
+                        <source src="/main_video/business_travel.ogv" type="video/ogg"> </video>
+                </div>
+                <div class="slider-video" style="background-image: url('/main_video/mice1.jpg')">
+                    <video class="slider-video--js" data-video-index="3" muted loop width="100%" preload="none" poster="/main_video/mice1.jpg">
+                        <source src="/main_video/mice.mp4" type="video/mp4">
+                        <source src="/main_video/mice.webm" type="video/webm">
+                        <source src="/main_video/mice.ogv" type="video/ogg"> </video>
+                </div>
+                <div class="slider-video" style="background-image: url('/main_video/incoming_tourism.jpg')">
+                    <video class="slider-video--js" data-video-index="4" muted loop width="100%" preload="none" poster="/main_video/incoming_tourism.jpg">
+                        <source src="/main_video/incoming_tourism.mp4" type="video/mp4">
+                        <source src="/main_video/incoming_tourism.webm" type="video/webm">
+                        <source src="/main_video/incoming_tourism.ogv" type="video/ogg"> </video>
+                </div>
+                <div class="slider-video" style="background-image: url('/main_video/france.jpg')">
+                    <video class="slider-video--js" data-video-index="5" muted loop width="100%" preload="none" poster="/main_video/france.jpg">
+                        <source src="/main_video/france.mp4" type="video/mp4">
+                        <source src="/main_video/france.webm" type="video/webm">
+                        <source src="/main_video/france.ogv" type="video/ogg"> </video>
+                </div>
+                <div class="slider-video" style="background-image: url('/main_video/israel.jpg')">
+                    <video class="slider-video--js" data-video-index="6" muted loop width="100%" preload="none" poster="/main_video/israel.jpg">
+                        <source src="/main_video/israel.mp4" type="video/mp4">
+                        <source src="/main_video/israel.webm" type="video/webm">
+                        <source src="/main_video/israel.ogv" type="video/ogg"> </video>
+                </div>
+                <div class="slider-video" style="background-image: url('/main_video/japan.jpg')">
+                    <video class="slider-video--js" data-video-index="7" muted loop width="100%" preload="none" poster="/main_video/japan.jpg">
+                        <source src="/main_video/japan.mp4" type="video/mp4">
+                        <source src="/main_video/japan.webm" type="video/webm">
+                        <source src="/main_video/japan.ogv" type="video/ogg"> </video>
+                </div>
+                <!-- END VIDEO -->
+            </div>
+        </div>
+        <div class="header-video-shader-two"></div>
+        <div class="header-video-shader"></div>
+        <div class="header-slider">
+            <div class="header-slider-container header-slider--js">
+                <div class="header-slider-item header-slider-item--js">
+                    <div class="header-slider-title">
+                        <div class="hst-wrapper">
+                            Выездной
+                            <br> туризм
+                            <br>
+                            <a href="/countries/" class="site-button white">Outbound tourism</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-slider-item header-slider-item--js">
+                    <div class="header-slider-title">
+                        <div class="hst-wrapper">
+                            Деловые
+                            <br> путешествия
+                            <br>
+                            <a href="/for-business/" class="site-button white">Business travel</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-slider-item header-slider-item--js">
+                    <div class="header-slider-title">
+                        <div class="hst-wrapper">
+                            Организация
+                            <br> мероприятий
+                            <br>
+                            <a href="/mice/" class="site-button white">MICE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-slider-item header-slider-item--js">
+                    <div class="header-slider-title">
+                        <div class="hst-wrapper">
+                            Прием иностранных
+                            <br> туристов
+                            <br>
+                            <a href="https://www.intercityservice.ru/" class="site-button white">Incoming tourism</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-slider-item header-slider-item--js">
+                    <div class="header-slider-title">
+                        <div class="hst-wrapper">
+                            Туры во
+                            <br> Францию
+                            <br>
+                            <a href="/countries/fr/" class="site-button white">выбрать тур</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-slider-item header-slider-item--js">
+                    <div class="header-slider-title">
+                        <div class="hst-wrapper">
+                            Туры в
+                            <br> Израиль
+                            <br>
+                            <a href="/countries/il/" class="site-button white">выбрать тур</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-slider-item header-slider-item--js">
+                    <div class="header-slider-title">
+                        <div class="hst-wrapper">
+                            Туры в
+                            <br> Японию
+                            <br>
+                            <a href="/countries/jp/" class="site-button white">выбрать тур</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-slider-menu">
+            <nav class="header-slider-menu-list">
+                <a href="#" class="header-slider-menu-item header-slider-menu-item--js active default" data-slide-index="1">Выездной туризм</a>
+
+                <a href="#" class="header-slider-menu-item header-slider-menu-item--js" data-slide-index="2">Бизнес тревел</a>
+
+                <a href="#" class="header-slider-menu-item header-slider-menu-item--js" data-slide-index="3">Организация мероприятий</a>
+
+                <a href="#" class="header-slider-menu-item header-slider-menu-item--js" data-slide-index="4">Прием иностранных туристов</a>
+
+                <a href="#" class="header-slider-menu-item header-slider-menu-item--js" data-slide-index="5">Туры во Францию</a>
+
+                <a href="#" class="header-slider-menu-item header-slider-menu-item--js" data-slide-index="6">Туры в Израиль</a>
+
+                <a href="#" class="header-slider-menu-item header-slider-menu-item--js" data-slide-index="7">Туры в Японию</a>
+
+            </nav>
+            <div class="header-slider-menu-line" id="header-slider-menu-line-id"></div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- content begin -->
+
+    <div class="site-page gallery site-tour-list gray darkblue">
+
+        <div class="site-parent-carousel--js">
+            <div class="main-darkblue">
+                <div class="main-title">Популярные направления</div>
+
+                <div class="main-countries">
+                    <div class="conteiner countries">
+                        <div class="countries-list">
+                            <div class="col">
+                                <div class="country-item"><a href="/countries/au/" class="country">Австралия</a></div>
+                                <div class="country-item"><a href="/countries/at/" class="country">Австрия</a></div>
+                                <div class="country-item"><a href="/countries/gb/" class="country">Великобритания</a></div>
+                                <div class="country-item"><a href="/countries/il/" class="country">Израиль</a></div>
+                            </div>
+                            <div class="col">
+                                <div class="country-item"><a href="/countries/id/" class="country">Индонезия</a></div>
+                                <div class="country-item"><a href="/countries/es/" class="country">Испания</a></div>
+                                <div class="country-item"><a href="/countries/it/" class="country">Италия</a></div>
+                                <div class="country-item"><a href="/countries/mu/" class="country">Маврикий</a></div>
+                            </div>
+                            <div class="col">
+                                <div class="country-item"><a href="/countries/mv/" class="country">Мальдивы</a></div>
+                                <div class="country-item"><a href="/countries/ae/" class="country">ОАЭ</a></div>
+                                <div class="country-item"><a href="/countries/pt/" class="country">Португалия</a></div>
+                                <div class="country-item"><a href="/countries/ru/" class="country">Россия</a></div>
+                            </div>
+                            <div class="col">
+                                <div class="country-item"><a href="/countries/sc/" class="country">Сейшелы</a></div>
+                                <div class="country-item"><a href="/countries/us/" class="country">США</a></div>
+                                <div class="country-item"><a href="/countries/th/" class="country">Таиланд</a></div>
+                                <div class="country-item"><a href="/countries/tr/" class="country">Турция</a></div>
+                            </div>
+                            <div class="col">
+                                <div class="country-item"><a href="/countries/fr/" class="country">Франция</a></div>
+                                <div class="country-item"><a href="/countries/ch/" class="country">Швейцария</a></div>
+                                <div class="country-item"><a href="/countries/za/" class="country">ЮАР</a></div>
+                                <div class="country-item"><a href="/countries/jp/" class="country">Япония</a></div>
+                            </div>
+                        </div>
+                        <div class="btn btn-countries"><a href="/countries/" class="country">все страны</a></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="main-title">Раннее бронирование</div>
+            <nav class="site-carousel-navigation">
+                <a href="#" class="gallery-nav-prev site-carousel-nav-prev--js"></a>
+                <a href="#" class="gallery-nav-next site-carousel-nav-next--js"></a>
+            </nav>
+            <div class="main-page-carousel gallery-carousel site-page-gallery-carousel gallery-carousel--js">
+                <div class="site-w">
+                    <nav class="gallery-navigation">
+                        <span class="gallery-nav-counter gallery-nav-counter--js">1/15</span>
+                        <a href="#" class="gallery-nav-prev gallery-nav-prev--js"></a>
+                        <a href="#" class="gallery-nav-next gallery-nav-next--js"></a>
+                    </nav>
+                </div>
+                <div class="tours-carousel main tours-carousel--js">
+                    <div class="tour-item">
+                        <div class="tour-item-image" style="background-image: url('/upload/iblock/d93/d93bff166a1c3c49d2670e89e676367d.jpg');"></div>
+                        <div class="tour-item-wrapper">
+                            <div class="tour-item-content">
+                                <div class="tour-info">
+                                    <div class="tour-item-country">Мальдивы</div>
+                                    <div class="tour-item-description">
+                                        До 4 бесплатных ночей при проживании с 16.04. по 31.07 в отеле Emerald Maldives Resort & Spa, Raa Atoll. Скидка 20&#37; для молодоженов. Спецпредложения в других отелях страны </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <a href="/countries/mv/hotels/emerald-maldives-resort-spa-raa-atoll/" class="site-button">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-image" style="background-image: url('/upload/iblock/846/846423710a50bb4ab921c4be09ba5075.jpg');"></div>
+                        <div class="tour-item-wrapper">
+                            <div class="tour-item-content">
+                                <div class="tour-info">
+                                    <div class="tour-item-country">Италия</div>
+                                    <div class="tour-item-description">
+                                        Скидки до 20&#37; на проживание с завтраком в люксовом отеле Pitrizza 5* при бронировании до 31 марта, а также множество бонусов в других гостиницах Италии </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <a href="/countries/it/tour/200024978/" class="site-button">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-image" style="background-image: url('/upload/iblock/107/107fa16006066df458a8182daf6d4093.jpg');"></div>
+                        <div class="tour-item-wrapper">
+                            <div class="tour-item-content">
+                                <div class="tour-info">
+                                    <div class="tour-item-country">Турция</div>
+                                    <div class="tour-item-description">
+                                        Скидка 20&#37; в курортном отеле Regnum Carya Golf & SPA Resort 5* при заездах с апреля по октябрь и бронировании до 15 февраля. Раннее бронирование в других отелях Турции! </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <a href="/countries/tr/tour/200025365/" class="site-button">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-image" style="background-image: url('/upload/iblock/927/927f67d40dbaff8dc3e27bde5e8d422f.jpg');"></div>
+                        <div class="tour-item-wrapper">
+                            <div class="tour-item-content">
+                                <div class="tour-info">
+                                    <div class="tour-item-country">Турция</div>
+                                    <div class="tour-item-description">
+                                        Скидка 25&#37; в курортном отеле Gloria Serenity 5* при заездах с апреля по октябрь и бронировании до 31 января. Раннее бронирование в других отелях Турции! </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <a href="/countries/tr/tour/200024999/" class="site-button">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-image" style="background-image: url('/upload/iblock/34b/34b2292fdcf492e6f215e8b335646ada.jpg');"></div>
+                        <div class="tour-item-wrapper">
+                            <div class="tour-item-content">
+                                <div class="tour-info">
+                                    <div class="tour-item-country">Турция</div>
+                                    <div class="tour-item-description">
+                                        Скидка 20&#37; в курортном Maxx Royal Kemer 5* при заездах с апреля по октябрь и бронировании до 29 февраля. Раннее бронирование в других отелях Турции! </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <a href="/countries/tr/tour/200025019/" class="site-button">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-image" style="background-image: url('/upload/iblock/9c0/9c0d7e8363ec4514823008badede7e12.jpg');"></div>
+                        <div class="tour-item-wrapper">
+                            <div class="tour-item-content">
+                                <div class="tour-info">
+                                    <div class="tour-item-country">Сейшелы</div>
+                                    <div class="tour-item-description">
+                                        При бронировании до 13 мая проживания в отеле Maia Luxury Resort & Spa 5* от 8 ночей 2 дополнительные ночи бесплатно. </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <a href="/countries/sc/tour/200011735/" class="site-button">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-image" style="background-image: url('/upload/iblock/f01/f0143967d64ef0f19a20ea190be6ad76.jpg');"></div>
+                        <div class="tour-item-wrapper">
+                            <div class="tour-item-content">
+                                <div class="tour-info">
+                                    <div class="tour-item-country">Французская Полинезия</div>
+                                    <div class="tour-item-description">
+                                        Скидка до 35&#37; при раннем бронировании в отеле Four Seasons Resort 5*, а еще море бонусов и спецпредложений в других гостиницах </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <a href="/countries/pf/tour/200004429/" class="site-button">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-image" style="background-image: url('/upload/iblock/73e/73e0b7a3018e3c6e7a162907ea792b99.jpg');"></div>
+                        <div class="tour-item-wrapper">
+                            <div class="tour-item-content">
+                                <div class="tour-info">
+                                    <div class="tour-item-country">Таиланд</div>
+                                    <div class="tour-item-description">
+                                        Скидки до 20&#37; на проживание в Sala Phuket Resort 5* и других роскошных отелях страны по программе раннего бронирования </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <a href="/countries/th/tour/200024774/" class="site-button">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-image" style="background-image: url('/upload/iblock/6ee/6eeea12d6b94435b7018a9a4cb731b3b.jpg');"></div>
+                        <div class="tour-item-wrapper">
+                            <div class="tour-item-content">
+                                <div class="tour-info">
+                                    <div class="tour-item-country">Португалия</div>
+                                    <div class="tour-item-description">
+                                        Скидка 15&#37; при раннем бронировании отеля Belmond Reids Palace 5*, при заездах в январе-феврале повышение категории номера, а также скидка 50&#37; на второй номер, занимаемый ребенком </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <a href="/countries/pt/tour/200024216/" class="site-button">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-image" style="background-image: url('/upload/iblock/228/2280c533c390cc0aba5012c9b0c8ce0f.jpg');"></div>
+                        <div class="tour-item-wrapper">
+                            <div class="tour-item-content">
+                                <div class="tour-info">
+                                    <div class="tour-item-country">Турция</div>
+                                    <div class="tour-item-description">
+                                        Скидка 20&#37; в курортном Rixos Sungate 5* в Анталье при заездах с апреля по октябрь и бронировании до 31 января. Раннее бронирование в других отелях Турции! </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <a href="/countries/tr/tour/200025014/" class="site-button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="personal-tour-order-button">
+            <a href="/local/ajax/individual-tour.php" class="site-button red js-modal">заказать<br>индивидуальный тур</a>
+        </div>
+    </div>
+
+    <div class="site-page gallery site-tour-list gray">
+
+        <div class="site-parent-carousel--js">
+            <div class="main-title">Актуально сейчас</div>
+            <nav class="site-carousel-navigation">
+                <a href="#" class="gallery-nav-prev site-carousel-nav-prev--js"></a>
+                <a href="#" class="gallery-nav-next site-carousel-nav-next--js"></a>
+            </nav>
+            <div class="main-page-carousel gallery-carousel site-page-gallery-carousel gallery-carousel--js">
+                <div class="site-w">
+                    <nav class="gallery-navigation">
+                        <span class="gallery-nav-counter gallery-nav-counter--js">1/15</span>
+                        <a href="#" class="gallery-nav-prev gallery-nav-prev--js"></a>
+                        <a href="#" class="gallery-nav-next gallery-nav-next--js"></a>
+                    </nav>
+                </div>
+                <div class="tours-carousel main tours-carousel--js">
+                    <div class="tour-item">
+                        <div class="tour-item-image full" style="background-image: url('/upload/iblock/6b6/6b6fac02fce555937b1e6d0ef889124a.jpg');"></div>
+                        <div class="tour-item-wrapper">
+                            <div class="tour-item-content full ">
+                                <div class="tour-info position-bottom">
+                                    <div class="tour-item-country">Великобритания</div>
+                                    <div class="tour-item-cost">
+                                        <span class="extra">Отдых с детьми</span>
+                                    </div>
+                                    <div class="tour-item-description">
+                                        Незабываемые школьные каникулы, богатая коллекция экскурсионных туров </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-image full" style="background-image: url('/upload/iblock/22e/22e345e16e496bf5243e4208ebf1ce8b.jpg');"></div>
+                        <div class="tour-item-wrapper">
+                            <div class="tour-item-content full ">
+                                <div class="tour-info position-bottom">
+                                    <div class="tour-item-country">Израиль</div>
+                                    <div class="tour-item-cost">
+                                        <span class="extra">мёртвое море</span>
+                                    </div>
+                                    <div class="tour-item-description">
+                                        Оздоровительные поездки на живительное Мертвое море и наслаждение Красным морем в Эйлате </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-image full" style="background-image: url('/upload/iblock/c58/c589ade987ecf7f87e6d5c6520596596.jpg');"></div>
+                        <div class="tour-item-wrapper">
+                            <div class="tour-item-content full  href" data-href="/countries/sc/tour/200016125/">
+                                <div class="tour-info position-bottom">
+                                    <div class="tour-item-country">Сейшелы</div>
+                                    <div class="tour-item-cost">
+                                        <span class="extra">СПЕЦПРЕДЛОЖЕНИЕ</span>
+                                    </div>
+                                    <div class="tour-item-description">
+                                        Умопомрачительные скидки для гостей Banyan Tree Seychelles </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-image full" style="background-image: url('/upload/iblock/a7b/a7b8c02fffcfa6f351a230ce28c67da6.jpg');"></div>
+                        <div class="tour-item-wrapper">
+                            <div class="tour-item-content full  href" data-href="/countries/fr/gornye-lyzhi/">
+                                <div class="tour-info position-bottom">
+                                    <div class="tour-item-country">Франция</div>
+                                    <div class="tour-item-cost">
+                                        <span class="extra">Уникальные предложения</span>
+                                    </div>
+                                    <div class="tour-item-description">
+                                        Катание на горных лыжах, сноуборде и не только! </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-image full" style="background-image: url('/upload/iblock/301/301234bd45f4334a89b3566c2ab5a0c9.jpg');"></div>
+                        <div class="tour-item-wrapper">
+                            <div class="tour-item-content full ">
+                                <div class="tour-info position-bottom">
+                                    <div class="tour-item-country">Мальдивы</div>
+                                    <div class="tour-item-cost">
+                                        <span class="extra">МОРЕ БОНУСОВ</span>
+                                    </div>
+                                    <div class="tour-item-description">
+                                        Скидки до 30&#37; на отель One&Only Reethe Rah &#43; бесплатный полупансион и трансфер при проживании от 4 ночей </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="tour-item-image full" style="background-image: url('/upload/iblock/3f2/3f26e2ff37e676193a8e552f31dd64af.jpg');"></div>
+                        <div class="tour-item-wrapper">
+                            <div class="tour-item-content full  href" data-href="/countries/es/hotels/the-ritz-carlton-abama-tenerife/">
+                                <div class="tour-info position-bottom">
+                                    <div class="tour-item-country">Испания</div>
+                                    <div class="tour-item-cost">
+                                        <span class="extra">МОРЕ БОНУСОВ НА ТЕНЕРИФЕ</span>
+                                    </div>
+                                    <div class="tour-item-description">
+                                        Скидка 15&#37; и бесплатное повышение категории номеров в отеле The Ritz-Carlton Abama, Tenerife </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="bxdynamic_KbYCcw_start" style="display:none"></div>
+        <div id="search-form-cont-block">
+            <div class="main-title">Поиск тура</div>
+            <div class="site-page blue-form border-top-red simple-search-form">
+                <div class="site-w">
+                    <form action="/search/" id="search-tour-form">
+                        <input type="hidden" name="search" value="Y" />
+                        <div class="row main-search-center">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-2">
+                                <label>Выбирайте страну</label>
+                                <div class="form-field select">
+                                    <select name="country" class="selectpicker fromfield" data-fieldtype="country">
+                                        <option value="20104">Австралия</option>
+                                        <option value="19866">Австрия</option>
+                                        <option value="19875">Азербайджан</option>
+                                        <option value="20121">Андорра</option>
+                                        <option value="20122">Аргентина</option>
+                                        <option value="20123">Армения</option>
+                                        <option value="20125">Бельгия</option>
+                                        <option value="20128">Бразилия</option>
+                                        <option value="19715">Великобритания</option>
+                                        <option value="23592">Вьетнам</option>
+                                        <option value="19537">Германия</option>
+                                        <option value="20105">Греция</option>
+                                        <option value="22984">Израиль</option>
+                                        <option value="20133">Индия</option>
+                                        <option value="20134">Индонезия</option>
+                                        <option value="20135">Иордания</option>
+                                        <option value="22971">Ирландия</option>
+                                        <option value="20823">Исландия</option>
+                                        <option value="19679">Испания</option>
+                                        <option value="967">Италия</option>
+                                        <option value="20136">Кения</option>
+                                        <option value="20137">Кипр</option>
+                                        <option value="23458">Китай</option>
+                                        <option value="20108">Маврикий</option>
+                                        <option value="23526">Малайзия</option>
+                                        <option value="23524">Мальдивы</option>
+                                        <option value="20147">Марокко</option>
+                                        <option value="22945">Мексика</option>
+                                        <option value="21121">Мьянма (Бирма)</option>
+                                        <option value="20152">Непал</option>
+                                        <option value="23537">Нидерланды (Голландия)</option>
+                                        <option value="23541">Новая Зеландия</option>
+                                        <option value="20806">Норвегия</option>
+                                        <option value="23429">ОАЭ</option>
+                                        <option value="23543">Перу</option>
+                                        <option value="20156">Польша</option>
+                                        <option value="20110">Португалия</option>
+                                        <option value="20120">Россия</option>
+                                        <option value="23557">Сейшелы</option>
+                                        <option value="102270">Сербия</option>
+                                        <option value="23560">Сингапур</option>
+                                        <option value="19530">США</option>
+                                        <option value="23576">Таиланд</option>
+                                        <option value="20162">Танзания</option>
+                                        <option value="20163">Турция</option>
+                                        <option value="20164">Узбекистан</option>
+                                        <option value="23472">Финляндия</option>
+                                        <option value="19559">Франция</option>
+                                        <option value="20168">Французская Полинезия</option>
+                                        <option value="20170">Черногория</option>
+                                        <option value="23462">Чехия</option>
+                                        <option value="20171">Чили</option>
+                                        <option value="22972">Швейцария</option>
+                                        <option value="23506">Шри-Ланка</option>
+                                        <option value="23425">ЮАР</option>
+                                        <option value="19867">Южная Корея</option>
+                                        <option value="23054">Япония</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Выбирайте город</label>
+                                <div class="form-field select">
+                                    <select name="city" class="selectpicker fromfield" data-fieldtype="city">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Когда</label>
+                                <div class="form-field text">
+                                    <input type="text" class="datepicker--js fromfield" name="from_date" data-fieldtype="from_date" value="11.02.2020" placeholder="дд.мм.гггг">
+                                </div>
+                                <div class="form-field checkbox">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="plus_minus_from_date" value="1" />
+                                        <span>+ - 3 дня</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                        <div class="row">
+                            <label class="col-md-12" id="search-tour-form-result"></label>
+                        </div>
+                        <button type="submit" class="site-button strong">найти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="bxdynamic_KbYCcw_end" style="display:none"></div>
+
+        <style>
+          .main-banner-air {
+            transform: translateY( 100px );
+            transition: all .5s ease;
+            opacity: 0;
+            text-align: center;
+          }
+          .main-banner-air.i-animate {
+            transform: translateY(0);
+            opacity: 1;
+          }
+          .main-banner-air img {
+            max-width: 1470px;
+          }
+        </style>
+        
+        <script>
+          ( function($) {
+            $( function() {
+              $( window ).scroll( function() {
+                if ( $( '.main-banner-air' ).hasClass( 'i-animate' )) {
+                  return;
+                }
+                if ( $( window ).scrollTop() >= $( '.main-banner-air' ).offset().top - ( $( window ).height() - $( '.main-banner-air' ).height() - 100 ) ) {
+                  $( '.main-banner-air' ).addClass( 'i-animate' );
+                }
+              }).scroll();
+              
+            });
+          }( jQuery ));
+        </script>
+        
+        <div class="main-banner-air">
+            <a href="">
+              <picture>
+                <source srcset="images/aeroflot-desktop.jpg" media="(min-width: 861px)" sizes="100vw">
+                <source srcset="images/aeroflot-mobile.jpg" media="(max-width: 860px)" sizes="100vw">
+                <img src="images/aeroflot-desktop.jpg" alt="Aeroflot" width="100%">
+              </picture>
+            </a>
+        </div>
+
+        <div class="main-page-text">
+            <!--
+<h1 style="text-align: center;" class="desktop">Туроператор KMP Group<br>
+ превосходные путешествия!</h1>
+<h1 class="mobile">Туроператор KMP Group<br>
+ превосходные путешествия!</h1>
+<p>
+</p>
+<p>
+	 KMP Group — компания с уникальной для российского туристического рынка практикой объединения самых современных технологий и персонализированного сервиса.
+</p>
+<p>
+	 Всего в течение нескольких лет с момента основания в 1989 году агентство заняло лидирующие позиции на развивающемся российском рынке въездного и выездного туризма, благодаря заложенной миссии, которая определяет не только высокое качество предоставляемых услуг и индивидуальный подход к каждому клиенту, но и расширение границ в создании новых интересных туристических продуктов.
+</p>
+<p>
+	 В 2005 году, опираясь на успешный многолетний опыт и растущий спрос, KMP Group открыла новое направление в своей деятельности — Департамент делового туризма. В течение последующих лет компания динамично развивалась, открывая новые направления и расширяя свои возможности.
+</p>
+<p>
+	 В настоящее время KMP Group является эталоном качества предоставления услуг во всех основных туристических направлениях: туры за рубеж в более чем 80 стран мира, приём иностранных граждан в России, деловые поездки и организация мероприятий (MICE).
+</p>
+<p>
+	 Многолетний опыт позволил компании создать собственную базу проверенных поставщиков услуг и партнёров, а также организовать эффективное сотрудничество с национальными офисами по туризму в различных странах мира.
+</p>
+<p>
+	 Каждый сотрудник KMP Group — это высококвалифицированный специалист с опытом работы более 10 лет, высокий профессионализм которых ежегодно подтверждается престижными наградами и премиями в сфере туризма.
+</p>
+<p>
+	 В своей деятельности компания использует все возможные ресурсы, эффективно сочетая профессиональный опыт и самые современные IT-технологии. Благодаря консолидации основных туристических направлений в рамках одной компании, прямым контрактам с поставщиками, использованию глобальных дистрибьюторских систем бронирования и самых современных информационных технологий KMP Group гарантирует своим клиентам премиальный комфорт, максимально быстрое обслуживание и эффективную оптимизацию затрат.
+</p>
+<p>
+ <b>KMP Group — Ваш надежный партнёр с 1989 года!</b>
+</p>
+--></div>
+    </div>
+
+    <footer class="main">
+        <div class="footer-middle desktop">
+            <div class="site-w">
+                <div id="bxdynamic_XEVOpk_start" style="display:none"></div>
+                <nav class="footer-menu">
+                    <a href="/countries/" class="footer-menu-item">Страны</a>
+
+                    <a href="/tours/" class="footer-menu-item">Туры</a>
+
+                    <a href="/for-agencies/" class="footer-menu-item">Агентствам</a>
+
+                    <a href="/for-business/" class="footer-menu-item">Business Travel & MICE</a>
+
+                    <a href="https://www.intercityservice.ru/" class="footer-menu-item">Incoming</a>
+
+                    <a href="/about/" class="footer-menu-item">О компании</a>
+
+                    <a href="/contacts/" class="footer-menu-item">Контакты</a>
+
+                </nav>
+                <div id="bxdynamic_XEVOpk_end" style="display:none"></div>
+            </div>
+        </div>
+
+        <div class="footer-middle tablet">
+            <div class="site-w">
+                <div id="bxdynamic_g8taYv_start" style="display:none"></div>
+                <nav class="footer-menu">
+                    <a href="/countries/" class="footer-menu-item">Страны</a><a href="/tours/" class="footer-menu-item">Туры</a><a href="/for-agencies/" class="footer-menu-item">Агентствам</a><a href="/for-business/" class="footer-menu-item">Business Travel & MICE</a></nav>
+                <nav class="footer-menu"><a href="https://www.intercityservice.ru/" class="footer-menu-item">Incoming</a><a href="/about/" class="footer-menu-item">О компании</a><a href="/contacts/" class="footer-menu-item">Контакты</a></nav>
+                <div id="bxdynamic_g8taYv_end" style="display:none"></div>
+            </div>
+        </div>
+    </footer>
+    <footer class="b-footer">
+        <div class="site-w">
+            <a href="/" class="hidden-xs b-footer__logo"><img src="/local/templates/kmp/images/footer/logo-footer.svg" width="100" alt=""></a>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h6 class="hidden-xs"><a href="/contacts/">Контакты</a></h6>
+
+                    <div class="b-footer__collapse">
+                        <h6 class="visible-xs-block b-footer__xs-h6 b-footer__collapse-header">+7 (495) 721-17-06<span style="background-image: url(/local/templates/kmp/images/footer/arrow-down.svg);"></span></h6>
+                        <div class="b-footer__collapse-block">
+                            <hr>
+                            <b>Для турагентств:</b>
+                            <br>
+                            <a href="tel:+74957211706">+7 (495) 721-17-06</a>
+                            <br>
+                            <a href="mailto:agency@kmp.ru">agency@kmp.ru</a>
+                            <hr>
+                            <b>Для частных лиц:</b>
+                            <br>
+                            <a href="tel:+74957211706">+7 (495) 721-17-06</a>
+                            <br>
+                            <a href="mailto:kmp@kmp.ru">kmp@kmp.ru</a>
+                            <br>
+                            <hr>
+                            <b>Организация командировок корпоративных клиентов:</b>
+                            <br>
+                            <a href="tel:+74957211706">+7 (495) 721-17-06 / 08</a>
+                            <br>
+                            <a href="mailto:bt@kmp.ru">bt@kmp.ru</a>
+                            <hr> </div>
+                    </div>
+
+                    <div class="hidden-xs">
+                        <b>Организация мероприятий:</b>
+                        <br>
+                        <a href="tel:+74957211707">+7 (495) 721-17-07</a>
+                        <br>
+                        <a href="mailto:mice@kmp.ru">mice@kmp.ru</a> </div>
+
+                </div>
+                <div class="col-sm-4">
+
+                    <div class="hidden-xs">
+                        <b>Incoming:</b>
+                        <br>
+                        <a href="tel:+74952342727">+7 (495) 234-27-27</a>
+                        <br>
+                        <a href="mailto:sales@kmp.ru">sales@kmp.ru</a>
+                        <hr>
+                    </div>
+
+                    <div class="visible-xs-block b-footer__collapse">
+                        <h6 class="visible-xs-block b-footer__xs-h6 b-footer__collapse-header">Наш адрес<span style="background-image: url(/local/templates/kmp/images/footer/arrow-down.svg);"></span></h6>
+                        <div class="b-footer__collapse-block">
+                            <hr>
+                            <span>Москва, Пыжёвский переулок, 6<br>м.Третьяковская, Полянка, Новокузнецкая</span>
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="b-footer__collapse">
+                        <b class="b-footer__xs-h6 b-footer__collapse-header">Служба 24/7 (круглосуточно):<span style="background-image: url(/local/templates/kmp/images/footer/arrow-down.svg);"></span></b>
+                        <div class="b-footer__collapse-block">
+                            <hr class="visible-xs-block">
+                            <a href="tel:+74957211708">+7 (495) 721-17-08</a>
+                            <br>
+                            <a href="tel:+79164521574"></a><a href="mailto:24@kmp.ru">24@kmp.ru</a> </div>
+                    </div>
+
+                    <div class="hidden-xs">
+                        <hr>
+                        <b>Бесплатный номер для регионов:</b>
+                        <br>
+                        <span><a href="tel:88002501707">8 (800) 250-17-07</a></span>
+                        <br>
+                    </div>
+
+                    <hr>
+                    <a href="/callback/" class="b-footer_link js-modal">Заказать звонок</a>
+                    <hr class="i-size-S">
+                    <a href="/local/ajax/individual-tour.php" class="b-footer_link js-modal">Отправить заявку на тур</a>
+                    <hr class="i-size-S">
+                    <a href="mailto:kmp@kmp.ru" class="b-footer_link">kmp@kmp.ru</a>
+                </div>
+                <div class="col-sm-4">
+                    <div class="hidden-xs">
+                        <h6>Адрес</h6>
+                        <hr>
+                        <span>Москва, Пыжёвский переулок, 6<br>м.Третьяковская, Полянка, Новокузнецкая</span>
+                        <hr class="i-size-L">
+                        <b class="hidden-xs">Подпишитесь на нашу рассылку,<br>и получайте эксклюзивные предложения!</b>
+                        <hr class="i-size-S">
+                    </div>
+                    <hr class="visible-xs-block">
+                    <div id="comp_f216f28c4ecc1866637ff139a871e744">
+                        <div class="bx-subscribe b-footer__subscribe" id="sender-subscribe">
+
+                            <script>
+                                (function() {
+                                    var btn = BX('bx_subscribe_btn_sljzMT');
+                                    var form = BX('bx_subscribe_subform_sljzMT');
+
+                                    if (!btn) {
+                                        return;
+                                    }
+
+                                    function mailSender() {
+                                        setTimeout(function() {
+                                            if (!btn) {
+                                                return;
+                                            }
+
+                                            var btn_span = btn.querySelector("span");
+                                            var btn_subscribe_width = btn_span.style.width;
+                                            BX.addClass(btn, "send");
+                                            btn_span.outterHTML = "<span><i class='fa fa-check'></i> ГОТОВО</span>";
+                                            if (btn_subscribe_width) {
+                                                btn.querySelector("span").style["min-width"] = btn_subscribe_width + "px";
+                                            }
+                                        }, 400);
+                                    }
+
+                                    BX.ready(function() {
+                                        BX.bind(btn, 'click', function() {
+                                            setTimeout(mailSender, 250);
+                                            return false;
+                                        });
+                                    });
+
+                                    BX.bind(form, 'submit', function() {
+                                        btn.disabled = true;
+                                        setTimeout(function() {
+                                            btn.disabled = false;
+                                        }, 2000);
+
+                                        return true;
+                                    });
+                                })();
+                            </script>
+
+                            <form id="bx_subscribe_subform_sljzMT" role="form" method="post" action="/">
+                                <input type="hidden" name="sessid" id="sessid_1" value="" />
+                                <input type="hidden" name="sender_subscription" value="add">
+                                <div class="b-footer__subscribe-content">
+                                    <input type="email" name="SENDER_SUBSCRIBE_EMAIL" value="" title="Введите ваш e-mail" placeholder="Введите ваш e-mail">
+                                    <button type="submit" id="bx_subscribe_btn_sljzMT">Подписаться</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <hr class="i-size-L hidden-xs">
+                    <hr class="visible-xs-block">
+
+                    <div class="b-footer__social">
+                        <a href="https://vk.com/public13005757" data-original="/local/templates/kmp/images/footer/vk.svg">Вконтакте</a>
+                        <a href="https://www.instagram.com/kmp.ru/" data-original="/local/templates/kmp/images/footer/instagram.svg">Instagram</a>
+                        <a href="https://twitter.com/KMP_Group_" data-original="/local/templates/kmp/images/footer/twitter.svg">Twitter</a>
+                        <a href="https://www.facebook.com/127588827320184" data-original="/local/templates/kmp/images/footer/facebook.svg">Facebook</a>
+                        <a href="https://ok.ru/group/53460184531097" data-original="/local/templates/kmp/images/footer/ok.svg">Одноклассники</a>
+                    </div>
+                    <hr>
+                    <a href="/politika/" class="b-h6 hidden-xs">Политика обработки персональных данных</a>
+                    <div class="visible-xs-block b-footer__note">
+                        Сайт kmp.ru не является публичной офертой. Стоимости всех услуг указаны для ознакомления. Окончательную стоимость уточняйте у менеджера на день бронирования. </div>
+                </div>
+            </div>
+
+            <hr class="i-size-L hidden-xs">
+            <hr class="i-line hidden-xs">
+            <hr class="hidden-xs">
+
+            <hr class="visible-xs-block">
+
+            <div class="b-footer__logo-block hidden-xs">
+                <div data-original="/upload/medialibrary/a75/a75b7d433328c0033b2f0753342a9ede.png"></div>
+                <div data-original="/upload/medialibrary/c08/c08ba42b3fde98263e6ba495e81e7ad9.png"></div>
+                <div data-original="/upload/medialibrary/7d7/7d7ccb158e8ed528a8d1bdcf411f3036.png"></div>
+                <div data-original="/upload/medialibrary/d5f/d5fbf3e7269f53d235705e9cc7ace37c.png"></div>
+            </div>
+            <hr class="hidden-xs">
+            <hr class="visible-xs-block">
+        </div>
+
+        <div class="b-footer__map hidden-xs" data-original="/local/templates/kmp/images/footer/map.png"></div>
+        <div class="b-footer__map visible-xs-block" data-original="/local/templates/kmp/images/footer/map-mobile.png"></div>
+        <hr class="hidden-xs">
+        <hr class="visible-xs-block">
+
+        <div class="hidden-xs">
+            <div class="site-w">
+                <div class="b-footer__logo-block">
+                    <div data-original="/upload/medialibrary/d93/d93628633bb4aa0a75c2251696c2a355.png"></div>
+                    <div data-original="/upload/medialibrary/9ba/9ba14c9200990311a1ac21d304d97fbf.png"></div>
+                    <div data-original="/upload/medialibrary/50b/50b1f84b395101a6bb43d7a146b316fe.png"></div>
+                    <div data-original="/upload/medialibrary/d33/d33131c6c76386e2f4cc21a3b32773d4.png"></div>
+                    <div data-original="/upload/medialibrary/2ae/2ae38b681f3c21be73aadad7aa41c1d0.png"></div>
+                </div>
+                <hr class="hidden-xs">
+                <hr class="visible-xs-block">
+            </div>
+        </div>
+
+        <div class="b-footer__copyright">
+            <span>&copy; 2005-2019 KMP GROUP ALL RIGHTS RESERVED, COPYING MATERIALS DENIED. 
+<span class="hidden-xs">
+Сайт kmp.ru не является публичной офертой. Стоимости всех услуг указаны для ознакомления. Окончательную стоимость уточняйте у менеджера на день бронирования.</span>
+            </span>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- modal windows begin -->
+    <div class="modal-window-shade" id="window-shade-id"></div>
+
+    <div class="modal-windows">
+
+        <!-- window auth begin -->
+        <div class="modal-window" id="window-auth-id">
+            <div class="mw-content">
+
+                <div class="mw-title">Авторизация</div>
+
+                <div class="flex-list">
+                    <div class="mw-half-window">
+                        <p>Войти через социальные сети</p>
+                        <a href="#" class="site-button social facebook">Facebook</a>
+                        <a href="#" class="site-button social vk">Вконтакте</a>
+                        <a href="#" class="site-button social google">Google</a>
+                        <a href="#" class="site-button social ok">Однокласники</a>
+                    </div>
+                    <div class="mw-half-window">
+                        <p>С помощью эл. почты</p>
+
+                        <div class="site-form">
+                            <div class="form-field simple-bottom">
+                                <input type="email" name="email" placeholder="Эл. почта">
+                            </div>
+                            <div class="form-field simple-bottom">
+                                <input type="password" name="pass" placeholder="Пароль">
+                            </div>
+                            <button type="submit" class="site-button orange margin-small ib">Войти</button>
+                        </div>
+
+                    </div>
+                    <a href="#window-register-id" class="mw-bottom-link left popup-modal--js">Регистрация</a>
+                    <a href="#window-password-recovery-id" class="mw-bottom-link right popup-modal--js">Забыли пароль?</a>
+                </div>
+
+            </div>
+            <div class="mw-close modal-window-close--js"></div>
+        </div>
+        <!-- window auth end -->
+    </div>
+    <!-- window main-menu begin -->
+    <div class="modal-window window-main-menu" id="window-main-menu-id">
+        <div class="mw-main-menu-title">
+            <a href="#" class="link-tablet-menu main-menu-popup--js">
+            Меню
+            <div class="menu-link open"><div></div><div></div><div></div></div>
+        </a>
+        </div>
+        <div class="mw-main-menu">
+
+            <div id="bxdynamic_rIpOz9_start" style="display:none"></div>
+            <div class="mc-main-menu-content content--js">
+
+                <a href="/countries/" class="header-menu-item header-menu-item--js">Страны</a>
+
+                <a href="/tours/" class="header-menu-item header-menu-item--js">Туры</a>
+
+                <a href="/for-agencies/" class="header-menu-item header-menu-item--js">Агентствам</a>
+
+                <a href="/for-business/" class="header-menu-item header-menu-item--js">Business Travel</a>
+
+                <a href="/mice/" class="header-menu-item header-menu-item--js">MICE</a>
+
+                <a href="https://www.intercityservice.ru/" class="header-menu-item header-menu-item--js">Incoming</a>
+
+                <a href="/about/" class="header-menu-item header-menu-item--js">О компании</a>
+
+                <a href="/contacts/" class="header-menu-item header-menu-item--js">Контакты</a>
+
+            </div>
+            <div id="bxdynamic_rIpOz9_end" style="display:none"></div>
+        </div>
+    </div>
+    <!-- window main-menu end -->
+    <!-- modal windows end -->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <!-- deleted by bitrix Antivirus -->
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script src="/local/templates/kmp/js/metrika.js"></script>
+</body>
+
+</html>
+<!--caaa61a4880d5bbf876a65f07f4ce751-->

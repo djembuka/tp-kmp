@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+        <!-- Google Tag Manager -->
+<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=hUuQZs-i2imlIHdHkccEG91PtGkrqxMoJQbW_G7Cz6uZPrGyQ6NlRrDQAiPTOS0Y" charset="UTF-8"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PQJLMBF');</script>
+<!-- End Google Tag Manager -->
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<script type="text/javascript" data-skip-moving="true">(function(w, d) {var v = w.frameCacheVars = {'CACHE_MODE':'HTMLCACHE','storageBlocks':[],'dynamicBlocks':{'LkGdQn':'d8a8498759d4','XEVOpk':'fbbf4634e8b4','g8taYv':'efaa37aaed7f','rIpOz9':'66f5773eef76','NMQc3w':'0c40d536d375'},'AUTO_UPDATE':true,'AUTO_UPDATE_TTL':'120'};var inv = false;if (v.AUTO_UPDATE === false){if (v.AUTO_UPDATE_TTL && v.AUTO_UPDATE_TTL > 0){var lm = Date.parse(d.lastModified);if (!isNaN(lm)){var td = new Date().getTime();if ((lm + v.AUTO_UPDATE_TTL * 1000) >= td){w.frameRequestStart = false;w.preventAutoUpdate = true;return;}inv = true;}}else{w.frameRequestStart = false;w.preventAutoUpdate = true;return;}}var r = w.XMLHttpRequest ? new XMLHttpRequest() : (w.ActiveXObject ? new w.ActiveXObject("Microsoft.XMLHTTP") : null);if (!r) { return; }w.frameRequestStart = true;var m = v.CACHE_MODE; var l = w.location; var x = new Date().getTime();var q = "?bxrand=" + x + (l.search.length > 0 ? "&" + l.search.substring(1) : "");var u = l.protocol + "//" + l.host + l.pathname + q;r.open("GET", u, true);r.setRequestHeader("BX-ACTION-TYPE", "get_dynamic");r.setRequestHeader("BX-CACHE-MODE", m);r.setRequestHeader("BX-CACHE-BLOCKS", v.dynamicBlocks ? JSON.stringify(v.dynamicBlocks) : "");if (inv){r.setRequestHeader("BX-INVALIDATE-CACHE", "Y");}try { r.setRequestHeader("BX-REF", d.referrer || "");} catch(e) {}if (m === "APPCACHE"){r.setRequestHeader("BX-APPCACHE-PARAMS", JSON.stringify(v.PARAMS));r.setRequestHeader("BX-APPCACHE-URL", v.PAGE_URL ? v.PAGE_URL : "");}r.onreadystatechange = function() {if (r.readyState != 4) { return; }var a = r.getResponseHeader("BX-RAND");var b = w.BX && w.BX.frameCache ? w.BX.frameCache : false;if (a != x || !((r.status >= 200 && r.status < 300) || r.status === 304 || r.status === 1223 || r.status === 0)){var f = {error:true, reason:a!=x?"bad_rand":"bad_status", url:u, xhr:r, status:r.status};if (w.BX && w.BX.ready){BX.ready(function() {setTimeout(function(){BX.onCustomEvent("onFrameDataRequestFail", [f]);}, 0);});}else{w.frameRequestFail = f;}return;}if (b){b.onFrameDataReceived(r.responseText);if (!w.frameUpdateInvoked){b.update(false);}w.frameUpdateInvoked = true;}else{w.frameDataString = r.responseText;}};r.send();})(window, document);</script>
+
+
+<link href="/bitrix/cache/css/s1/kmp/kernel_main/kernel_main.css?152948439426562" type="text/css"   rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/kmp/template_626ffaa3367b2f3488820113cc0b150b/template_626ffaa3367b2f3488820113cc0b150b.css?1573802066480815" type="text/css"   data-template-style="true"  rel="stylesheet" />
+
+<script type="text/javascript">if(!window.BX)window.BX={};if(!window.BX.message)window.BX.message=function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','SITE_DIR':'/'});</script>
+
+
+<script type="text/javascript"  src="/bitrix/cache/js/s1/kmp/kernel_main/kernel_main.js?1562059683298080"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_db.min.js?15172224488699"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_frame_cache.min.js?151722244811191"></script>
+<script type="text/javascript" src="/bitrix/js/main/jquery/jquery-2.1.3.min.min.js?151722244884283"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core.js','/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/json/json2.min.js','/bitrix/js/main/core/core_ls.js','/bitrix/js/main/session.js','/bitrix/js/main/core/core_window.js','/bitrix/js/main/core/core_popup.js','/bitrix/js/main/core/core_date.js','/bitrix/js/main/utils.js','/bitrix/js/main/core/core_fx.js','/local/templates/kmp/libs/jquery-ui.min.js','/local/templates/kmp/libs/jquery.ui.touch-punch.min.js','/local/templates/kmp/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js','/local/templates/kmp/libs/bootstrap-select-1.12.4/js/bootstrap-select.min.js','/local/templates/kmp/libs/bootstrap-select-1.12.4/js/i18n/defaults-ru_RU.min.js','/local/templates/kmp/libs/slick/slick.js','/local/templates/kmp/libs/simple-scrollbar-master/simple-scrollbar.js','/local/templates/kmp/libs/magnific-popup/jquery.magnific-popup.min.js','/local/templates/kmp/libs/endless-scroll/endless-scroll.min.js','/local/templates/kmp/libs/jquery-ui-daterangepicker-0.6.0/jquery.comiseo.daterangepicker.js','/local/templates/kmp/libs/less.min.js','/local/templates/kmp/libs/jquery.touchSwipe.min.js','/local/templates/kmp/libs/float-panel/float-panel.js','/local/templates/kmp/js/tools.js','/local/templates/kmp/js/main.js','/local/templates/kmp/libs/jquery.inputmask.bundle.js','/local/templates/kmp/libs/jquery-validation/core.js','/local/templates/kmp/libs/jquery-validation/localization/messages_ru.js','/local/templates/kmp/js/dev.js']); </script>
+<script type="text/javascript">BX.setCSSList(['/bitrix/js/main/core/css/core.css','/bitrix/js/main/core/css/core_popup.css','/bitrix/js/main/core/css/core_date.css','/local/templates/kmp/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css','/local/templates/kmp/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css','/local/templates/kmp/libs/slick/slick.css','/local/templates/kmp/libs/bootstrap-select-1.12.4/css/bootstrap-select.min.css','/local/templates/kmp/libs/simple-scrollbar-master/simple-scrollbar.css','/local/templates/kmp/libs/magnific-popup/magnific-popup.css','/local/templates/kmp/libs/jquery-ui-daterangepicker-0.6.0/jquery.comiseo.daterangepicker.css','/local/templates/kmp/libs/css/fonts_googleapis.css','/local/templates/kmp/libs/css/jquery-ui.css','/local/templates/kmp/libs/css/ionicons.min.css','/local/templates/kmp/styles.css','/local/templates/kmp/template_styles.css']); </script>
+<script type="text/javascript">
+					(function () {
+						"use strict";
+
+						var counter = function ()
+						{
+							var cookie = (function (name) {
+								var parts = ("; " + document.cookie).split("; " + name + "=");
+								if (parts.length == 2) {
+									try {return JSON.parse(decodeURIComponent(parts.pop().split(";").shift()));}
+									catch (e) {}
+								}
+							})("BITRIX_CONVERSION_CONTEXT_s1");
+
+							if (cookie && cookie.EXPIRE >= BX.message("SERVER_TIME"))
+								return;
+
+							var request = new XMLHttpRequest();
+							request.open("POST", "/bitrix/tools/conversion/ajax_counter.php", true);
+							request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+							request.send(
+								"SITE_ID="+encodeURIComponent("s1")+
+								"&sessid="+encodeURIComponent(BX.bitrix_sessid())+
+								"&HTTP_REFERER="+encodeURIComponent(document.referrer)
+							);
+						};
+
+						if (window.frameRequestStart === true)
+							BX.addCustomEvent("onFrameDataReceived", counter);
+						else
+							BX.ready(counter);
+					})();
+				</script>
+<script type="text/javascript">less = {env: 'development'};</script>
+
+
+
+<script type="text/javascript"  src="/bitrix/cache/js/s1/kmp/template_ce98c727b13c8f231808a255060b0830/template_ce98c727b13c8f231808a255060b0830.js?1573802066869970"></script>
+
+		<title>MICE</title>
+		<!--[if gte IE 9]>
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/><![endif]-->
+	    <link href="template/favicon.ico" type="image/x-icon" rel="icon"/>
+	    <link href="template/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+
+		
+	    <!--[if lte IE 9]>
+	    <script src="template/js/ie-html5.js"></script><![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes">
+    	<meta name="format-detection" content="telephone=no">
+    	
+	</head>
+	<body>
+        <!-- Google Tag Manager (noscript) -->
+<noscript><!-- deleted by bitrix Antivirus --></noscript>
+<!-- End Google Tag Manager (noscript) -->
+		<div id="panel">
+					</div>
+<!-- header begin -->
+<header class="main">
+
+    <div class="header-top">
+        <div class="header-top-item">
+<a href="mailto:kmp@kmp.ru">kmp@kmp.ru</a><br>
+        <div class="header-top-rates">
+        <div>
+<span class="rate">USD: 65.423</span>
+<span class="rate">EUR: 72.482</span>
+</div>        </div>
+        </div>
+
+        <div class="header-top-item callback"><a href="/callback/" class="js-modal">Заказать звонок</a></div>
+        <div class="header-top-item logo">
+							<a href="/" class="logotype">
+						<img src="/local/templates/kmp/images/logotype.png" alt="Туроператор КМП Групп">							</a>
+					</div>
+
+        <div class="header-top-item">
+<a href="tel:+74957211707">+7 (495) 721 17 07</a>       </div>
+
+        <div class="header-top-item cabinet">
+			<a target="_blank" href="https://kmponline.ru/" class="profile-link">Личный <br>кабинет</a>
+            <a href="#window-main-menu-id" class="link-tablet-menu tablet main-menu-popup--js">
+                Меню
+                <div class="menu-link"><div></div><div></div><div></div></div>
+            </a>
+        </div>
+    </div>
+    <div class="header-bottom desktop">
+        <div class="header-bottom-line"></div>
+        <div id="bxdynamic_LkGdQn_start" style="display:none"></div>
+<nav class="header-menu">
+
+			<a href="/countries/" class="header-menu-item header-menu-item--js">Страны</a>
+	
+			<a href="/tours/" class="header-menu-item header-menu-item--js">Туры</a>
+	
+			<a href="/for-agencies/" class="header-menu-item header-menu-item--js">Агентствам</a>
+	
+			<a href="/for-business/" class="header-menu-item header-menu-item--js">Business Travel</a>
+	
+			<a href="/mice/" class="header-menu-item header-menu-item--js active default">MICE</a>
+	
+			<a href="https://www.intercityservice.ru/" class="header-menu-item header-menu-item--js">Incoming</a>
+	
+			<a href="/about/" class="header-menu-item header-menu-item--js">О компании</a>
+	
+			<a href="/contacts/" class="header-menu-item header-menu-item--js">Контакты</a>
+	
+
+</nav>
+<div class="header-menu-line" id="header-menu-line-id"></div>
+<div id="bxdynamic_LkGdQn_end" style="display:none"></div>
+
+    </div>
+        </header><!-- header end -->
+
+
+<!-- content begin -->
+<div class="site-page">
+    <div class="site-w site-content">
+    <div class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><nav class="breadcrumbs">
+				
+				<div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> 
+					<a href="http://kmp.ru/" title="Главная" itemprop="item" class="breadcrumb_item b-item">
+						<span itemprop="name">Главная</span>
+					</a>
+					<meta itemprop="position" content="1" />
+				</div>
+			<span class="breadcrumb_item _delimeter b-separator">/</span>
+					<div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> 
+						<a href="#" title="MICE" itemprop="item" class="breadcrumb_item b-item active">
+							<span itemprop="name">MICE</span>
+						</a>
+						<meta itemprop="position" content="2" />
+					</div> </nav></div>
+
+	</div>	<!-- site-w site-content -->
+</div>	<!-- site-page -->
+
+
+
+
+
+<!-- footer begin -->
+<link href="style.css" rel="stylesheet">
+<script src="script.js"></script>
+<footer class="b-footer">
+
+  <a href="/"><img src="images/logo-footer.svg" width="175" alt=""></a>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <h6>Контакты</h6>
+      <hr>
+      <b>Для турагентств:</b><br>
+      +7 (495) 721-17-06<br>
+      <a href="mailto:agency@kmp.ru">agency@kmp.ru</a>
+      <hr>
+      <b>Для частных лиц:</b><br>
+      +7 (495) 721-17-06
+      <hr>
+      <b>Организация командировок корпоративных клиентов:</b><br>
+      +7 (495) 721-17-06 / 08<br>
+      <a href="mailto:bt@kmp.ru">bt@kmp.ru</a>
+      <hr>
+      <b>Организация мероприятий:</b><br>
+      +7 (495) 721-17-07<br>
+      <a href="mailto:mice@kmp.ru">mice@kmp.ru</a>
+    </div>
+    <div class="col-sm-4">
+      <b>Incoming:</b><br>
+      +7 (495) 234-27-27<br>
+      <a href="mailto:sales@kmp.ru">sales@kmp.ru</a>
+      <hr>
+      <b>Служба 24/7:</b><br>
+      (круглосуточно)<br>
+      +7 (495) 721-17-08<br>
+      +7 (916) 452-15-74<br>
+      <a href="mailto:24@kmp.ru">24@kmp.ru</a>
+      <hr>
+      <b>Бесплатный номер для регионов:</b><br>
+      +7 (800) 250-17-07<br>
+      
+      <hr>
+      <a href="" class="b-footer_link">Заказать звонок</a>
+      <hr class="i-size-S">
+      <a href="" class="b-footer_link">Отправить заявку на тур</a>
+      <hr class="i-size-S">
+      <a href="" class="b-footer_link">kmp@kmp.ru</a>
+    </div>
+    <div class="col-sm-4">
+      <h6>Адрес</h6>
+      <hr>
+      Москва, Пыжёвский переулок, 6<br>
+      (м.Третьяковская, Полянка, Новокузнецкая)
+      <hr class="i-size-L">
+      <b>Подпишитесь на нашу рассылку,<br>и получате эксклюзивные предложения!</b>
+      <hr class="i-size-S">
+      <form action="form-response.json" method="GET" class="b-footer__form">
+        <div class="b-footer__form-content">
+          <input type="email" name="email" value="">
+          <button type="submit">Подписаться</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</footer><!-- footer end -->
+
+
+<!-- modal windows begin -->
+<div class="modal-window-shade" id="window-shade-id"></div>
+
+<div class="modal-windows">
+
+    <!-- window auth begin -->
+    <div class="modal-window" id="window-auth-id">
+        <div class="mw-content">
+
+            <div class="mw-title">Авторизация</div>
+
+            <div class="flex-list">
+                <div class="mw-half-window">
+                    <p>Войти через социальные сети</p>
+                    <a href="#" class="site-button social facebook">Facebook</a>
+                    <a href="#" class="site-button social vk">Вконтакте</a>
+                    <a href="#" class="site-button social google">Google</a>
+                    <a href="#" class="site-button social ok">Однокласники</a>
+                </div>
+                <div class="mw-half-window">
+                    <p>С помощью эл. почты</p>
+
+                    <div class="site-form">
+                        <div class="form-field simple-bottom">
+                            <input type="email" name="email" placeholder="Эл. почта">
+                        </div>
+                        <div class="form-field simple-bottom">
+                            <input type="password" name="pass" placeholder="Пароль">
+                        </div>
+                        <button type="submit" class="site-button orange margin-small ib">Войти</button>
+                    </div>
+
+                </div>
+                <a href="#window-register-id" class="mw-bottom-link left popup-modal--js">Регистрация</a>
+                <a href="#window-password-recovery-id" class="mw-bottom-link right popup-modal--js">Забыли пароль?</a>
+            </div>
+
+        </div>
+        <div class="mw-close modal-window-close--js"></div>
+    </div>
+    <!-- window auth end -->
+</div>
+<!-- window main-menu begin -->
+<div class="modal-window window-main-menu" id="window-main-menu-id">
+    <div class="mw-main-menu-title">
+        <a href="#" class="link-tablet-menu main-menu-popup--js">
+            Меню
+            <div class="menu-link open"><div></div><div></div><div></div></div>
+        </a>
+    </div>
+    <div class="mw-main-menu">
+
+		<div id="bxdynamic_NMQc3w_start" style="display:none"></div>
+<div class="mc-main-menu-content content--js">
+
+			<a href="/countries/" class="header-menu-item header-menu-item--js">Страны</a>
+	
+			<a href="/tours/" class="header-menu-item header-menu-item--js">Туры</a>
+	
+			<a href="/for-agencies/" class="header-menu-item header-menu-item--js">Агентствам</a>
+	
+			<a href="/for-business/" class="header-menu-item header-menu-item--js">Business Travel</a>
+	
+			<a href="/mice/" class="header-menu-item header-menu-item--js active default">MICE</a>
+	
+			<a href="https://www.intercityservice.ru/" class="header-menu-item header-menu-item--js">Incoming</a>
+	
+			<a href="/about/" class="header-menu-item header-menu-item--js">О компании</a>
+	
+			<a href="/contacts/" class="header-menu-item header-menu-item--js">Контакты</a>
+	
+
+</div>
+<div id="bxdynamic_NMQc3w_end" style="display:none"></div>    </div>
+</div>
+<!-- window main-menu end --><!-- modal windows end -->
+
+
+	</body>
+</html><!--2440fe274b1a8afd9b83946bf949188a-->
